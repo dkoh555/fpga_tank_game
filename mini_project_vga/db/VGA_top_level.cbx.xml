@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="VGA_top_level">
+		<CBX_INST_ENTRY INSTANCE_NAME="|VGA_top_level|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pv71.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
