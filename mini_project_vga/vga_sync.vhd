@@ -9,14 +9,14 @@ ENTITY VGA_SYNC IS
 			clock_50Mhz										: in std_logic;
 			horiz_sync_out, vert_sync_out, 
 			video_on, pixel_clock, eof						: out std_logic;												
-			pixel_row, pixel_column						    : out std_logic_vector(9 downto 0)
+			pixel_row, pixel_column						    : out std_logic_vector(7 downto 0)
 		);					    		
 END ENTITY VGA_SYNC;
 
 ARCHITECTURE behavioral OF VGA_SYNC IS
 	SIGNAL horiz_sync, vert_sync, pixel_clock_int : STD_LOGIC;
 	SIGNAL video_on_int, video_on_v, video_on_h : STD_LOGIC;
-	SIGNAL h_count, v_count :STD_LOGIC_VECTOR(9 DOWNTO 0);
+	SIGNAL h_count, v_count :STD_LOGIC_VECTOR(7 downto 0);
 --
 -- To select a different screen resolution, clock rate, and refresh rate
 -- pick a set of new video timing constant values from table at end of code section
@@ -92,7 +92,7 @@ BEGIN
 --  V_count         0                        last pixel row      V sync low       end
 --
 	IF (v_count >= V_end_count) AND (h_count >= H_sync_low) THEN
-   		v_count <= "0000000000";
+   		v_count <= "00000000";
    		--eof <= '1';
 	ELSIF (h_count = H_sync_low) THEN
    		v_count <= v_count + 1;
