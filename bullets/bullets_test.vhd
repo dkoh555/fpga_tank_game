@@ -18,7 +18,6 @@ architecture behavioural of bullets_tb is
             -- Inputs
             bullet_move : in std_logic;
             rst : in std_logic;
-            rst_hit : in std_logic;
             shoot : in std_logic;
             curr_tank_x : in std_logic_vector (9 downto 0);
             curr_tank_y : in std_logic_vector (9 downto 0);
@@ -60,7 +59,6 @@ begin
             -- Inputs
             bullet_move => bullet_move_TB,
             rst => rst_TB,
-            rst_hit => rst_hit_TB,
             shoot => shoot_TB,
             curr_tank_x => curr_tank_x_TB,
             curr_tank_y => curr_tank_y_TB,
@@ -77,8 +75,10 @@ begin
 		wait for 1 ps;
 	end process;
 
-    process (hit_TB) begin
-        if (rising_edge(hit_TB)) then
+    process (rst_TB, hit_TB) begin
+        if (rst_TB = '1') then 
+            store_hit_TB <= '0';
+        elsif (rising_edge(hit_TB)) then
             store_hit_TB <= '1';
         end if;
     end process;
@@ -125,7 +125,6 @@ begin
             other_tank_x_TB <= std_logic_vector(to_unsigned(in_other_tank_x, other_tank_x_TB'length));
             other_tank_y_TB <= std_logic_vector(to_unsigned(in_other_tank_y, other_tank_y_TB'length));
 			
-            rst_hit_TB <= '0';
 			rst_TB <= '0';
 			wait for 2 ps;
 			rst_TB <= '1';
@@ -147,16 +146,7 @@ begin
 				shoot_TB <= not shoot_TB;
 				wait for 0.1 ps;
 				shoot_TB <= not shoot_TB;
-				wait for 497.9 ps;
-                if (hit_TB = '1') then
-                    rst_hit_TB <= '1';
-                    wait for 1 ps;
-                    rst_hit_TB <= '0';
-                    wait for 1 ps;
-                else
-                    rst_hit_TB <= '0';
-                    wait for 2 ps;
-                end if;
+				wait for 499.9 ps;
 			end loop;
 
 			--With the calculator result, prepare output for outfile

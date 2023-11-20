@@ -11,7 +11,6 @@ entity bullet is
         -- Inputs
         bullet_move : in std_logic;
         rst : in std_logic;
-        rst_hit : in std_logic;
         shoot : in std_logic;
         curr_tank_x : in std_logic_vector (9 downto 0);
         curr_tank_y : in std_logic_vector (9 downto 0);
@@ -29,6 +28,8 @@ architecture behavioral of bullet is
     
     signal internal_shoot_status, internal_bullet_valid, internal_hit : std_logic;
     signal curr_bullet_x, curr_bullet_y : std_logic_vector (9 downto 0);
+    signal rst_hit : std_logic;
+
 
     function get_collision (signal other_tank_x, other_tank_y, bullet_x, bullet_y: std_logic_vector) return std_logic is
 		variable collision : std_logic;
@@ -46,6 +47,21 @@ architecture behavioral of bullet is
 	end function get_collision;
 
 begin
+
+    process (rst, bullet_move) begin
+        if (rst = '1') then
+            rst_hit <= '0';
+        elsif (rising_edge(bullet_move)) then
+            if (internal_hit = '1') then
+                rst_hit <= '1';
+            end if;
+        elsif (falling_edge(bullet_move)) then
+            if (rst_hit = '1') then
+                rst_hit <= '0';
+            end if;
+        end if;
+
+    end process;
 
     process (internal_bullet_valid, shoot) begin
         -- If reset
