@@ -7,7 +7,7 @@ entity pixelGenerator is
 	port(
 			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
 			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
-			red_out, green_out, blue_out					: out std_logic_vector(9 downto 0)
+			red_out, green_out, blue_out					: out std_logic_vector(7 downto 0)
 		);
 end entity pixelGenerator;
 
@@ -40,9 +40,9 @@ begin
 
 --------------------------------------------------------------------------------------------
 	
-	red_out <= color(29 downto 20);
-	green_out <= color(19 downto 10);
-	blue_out <= color(9 downto 0);
+	red_out <= color(27 downto 20);
+	green_out <= color(17 downto 10);
+	blue_out <= color(7 downto 0);
 
 	pixel_row_int <= to_integer(unsigned(pixel_row));
 	pixel_column_int <= to_integer(unsigned(pixel_column));
