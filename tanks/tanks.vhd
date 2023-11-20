@@ -2,6 +2,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use WORK.tank_const.all;
 
 -- Tank entities
 entity tank is
@@ -11,14 +12,8 @@ entity tank is
         rst : in std_logic;
         tank_in_y : in std_logic_vector (9 downto 0);
         tank_move : in std_logic;
-        tank_out_y : in std_logic_vector (9 downto 0);
-        tank_out_x : in std_logic_vector (9 downto 0);
-    );
-    generic (
-        screen_width : natural := 640;
-        screen_height : natural := 480;
-        tank_width: natural := 20;
-        tank_height: natural := 10;
+        tank_out_y : out std_logic_vector (9 downto 0);
+        tank_out_x : out std_logic_vector (9 downto 0)
     );
 end entity tank;
 
@@ -35,20 +30,20 @@ begin
     process (tank_move, rst) begin
         -- If reset, move tank back to middle 
         if (rst = '1') then
-            internal_tank_x <= std_logic_vector(to_unsigned(screen_width / 2));
+            internal_tank_x <= std_logic_vector(to_unsigned(SCREEN_WIDTH / 2, internal_tank_x'length));
             new_direction <= '0';
         -- If tank_move recieved, move based on current direction
         elsif (rising_edge(tank_move)) then
             -- If tank moves to right and does not exceed screen, move it to right
-            if (integer(unsigned(internal_tank_x)) + tank_width / 2 + 1 < screen_height and direction = '0') then
+            if (to_integer(unsigned(internal_tank_x)) + TANK_WIDTH / 2 + 1 < SCREEN_WIDTH and direction = '0') then
                 internal_tank_x <= std_logic_vector(unsigned(internal_tank_x) + 1);
                 new_direction <= '0';
             -- If tank moves to right and does exceed screen, move it to left
-            elsif (integer(unsigned(internal_tank_x)) + tank_width / 2 + 1 >= screen_height and direction = '0') then
+            elsif (to_integer(unsigned(internal_tank_x)) + TANK_WIDTH / 2 + 1 >= SCREEN_WIDTH and direction = '0') then
                 internal_tank_x <= std_logic_vector(unsigned(internal_tank_x) - 1);
                 new_direction <= '1';
             -- If tank moves to left and does not exceed screen, move it to left
-            elsif (integer(unsigned(internal_tank_x)) - tank_width / 2 - 1 > 0 and direction = '1') then
+            elsif (to_integer(unsigned(internal_tank_x)) - TANK_WIDTH / 2 - 1 > 0 and direction = '1') then
                 internal_tank_x <= std_logic_vector(unsigned(internal_tank_x) - 1);
                 new_direction <= '1';
             -- If tank moves to left and does exceed screen, move it to right

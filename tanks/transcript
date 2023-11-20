@@ -1,0 +1,254 @@
+# Compile of tanks.vhd failed with 1 errors.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of tanks.vhd failed with 1 errors.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of tanks.vhd failed with 1 errors.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of tanks.vhd failed with 1 errors.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of tanks.vhd failed with 1 errors.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 2 failed with 28 errors.
+# Compile of tanks.vhd failed with 7 errors.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 2 failed with 34 errors.
+# Compile of tanks.vhd failed with 7 errors.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 2 failed with 34 errors.
+# Compile of tanks.vhd failed with 5 errors.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 2 failed with 32 errors.
+# Compile of tanks.vhd failed with 9 errors.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 2 failed with 36 errors.
+# Compile of tanks.vhd failed with 2 errors.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 2 failed with 29 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 27 errors.
+# 2 compiles, 1 failed with 27 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 4 errors.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 4 errors.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 10 errors.
+# 2 compiles, 1 failed with 10 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 10 errors.
+# 2 compiles, 1 failed with 10 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 7 errors.
+# 2 compiles, 1 failed with 7 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of tanks.vhd failed with 3 errors.
+# Compile of tanks_test.vhd failed with 3 errors.
+# 2 compiles, 2 failed with 6 errors.
+# Compile of tanks.vhd failed with 3 errors.
+# Compile of tanks_test.vhd failed with 3 errors.
+# Compile of tank_const.vhd failed with 1 errors.
+# 3 compiles, 3 failed with 7 errors.
+# Compile of tank_const.vhd failed with 1 errors.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:32:28 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+# ** Fatal: (vsim-3808) Incompatible modes for port "tank_out_y".
+#    Time: 0 ps  Iteration: 0  Instance: /tanks_tb/dut File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd Line: 53
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 09:32:28 on Nov 20,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 29
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:33:20 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+quit -sim
+# End time: 09:35:10 on Nov 20,2023, Elapsed time: 0:01:50
+# Errors: 0, Warnings: 2
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:35:18 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+quit -sim
+# End time: 09:38:30 on Nov 20,2023, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 1
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:39:00 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 115 ps  Iteration: 0  Instance: /tanks_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 385 ps  Iteration: 0  Instance: /tanks_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 510 ps  Iteration: 0  Instance: /tanks_tb
+quit -sim
+# End time: 09:39:38 on Nov 20,2023, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 6
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:40:26 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+quit -sim
+# End time: 09:41:38 on Nov 20,2023, Elapsed time: 0:01:12
+# Errors: 0, Warnings: 3
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:41:48 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+quit -sim
+# End time: 09:45:33 on Nov 20,2023, Elapsed time: 0:03:45
+# Errors: 0, Warnings: 2
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:45:42 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+quit -sim
+# End time: 09:48:00 on Nov 20,2023, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 2
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:48:09 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
