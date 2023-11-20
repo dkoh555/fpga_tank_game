@@ -11,11 +11,7 @@ entity gamestate is
         clk : in std_logic;
         score1 : in std_logic_vector (1 downto 0);
         score2 : in std_logic_vector (1 downto 0);
-        winner : out std_logic_vector (1 downto 0);
-    );
-
-    generic (
-        winning_score : std_logic_vector (1 downto 0);
+        winner : out std_logic_vector (1 downto 0)
     );
 
 end entity gamestate;
