@@ -540,3 +540,27 @@ restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 add wave -r /*
 run
+quit -sim
+# End time: 14:56:11 on Nov 20,2023, Elapsed time: 0:25:10
+# Errors: 0, Warnings: 1
+# Compile of score_const.vhd was successful.
+# Compile of score.vhd failed with 6 errors.
+# Compile of score_test.vhd failed with 6 errors.
+# 3 compiles, 2 failed with 12 errors.
+# Compile of score_const.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.score_tb
+# vsim -gui work.score_tb 
+# Start time: 14:57:17 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.score_const(body)
+# Loading work.score_tb(behavioural)
+# Loading work.score(behavioral)
+add wave -r /*
+run

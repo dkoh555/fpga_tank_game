@@ -3,6 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.std_logic_textio.all;
 use std.textio.all;
+use WORK.score_const.all;
 
 entity score_tb is
 	
@@ -16,7 +17,7 @@ architecture behavioural of score_tb is
         port (
         rst : in std_logic;
         other_tank_hit : in std_logic;
-        curr_tank_score : out std_logic_vector (1 downto 0)
+        curr_tank_score : out std_logic_vector (SCORE_WIDTH - 1 downto 0)
     );
     
     end component score;
@@ -24,7 +25,7 @@ architecture behavioural of score_tb is
 	--Declaring signals
     signal rst_TB : std_logic;
     signal other_tank_hit_TB : std_logic;
-    signal curr_tank_score_TB : std_logic_vector (1 downto 0);
+    signal curr_tank_score_TB : std_logic_vector (SCORE_WIDTH - 1 downto 0);
 
 	--Signal to determine when testbench is done
 	signal TB_done : std_logic;

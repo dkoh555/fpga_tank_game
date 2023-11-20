@@ -2,6 +2,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use WORK.score_const.all;
 
 -- Score entity
 entity score is 
@@ -16,7 +17,7 @@ end entity score;
 
 architecture behavioral of score is
 
-    signal internal_curr_tank_score : std_logic_vector (1 downto 0);
+    signal internal_curr_tank_score : std_logic_vector (SCORE_WIDTH - 1 downto 0);
 
 begin
 
@@ -28,7 +29,7 @@ begin
         -- If hit becomes 1
         elsif (rising_edge(other_tank_hit)) then
             -- Increase score by 1
-            internal_curr_tank_score <= std_logic_vector(unsigned(internal_curr_tank_score) + to_unsigned(1, internal_curr_tank_score'length));
+            internal_curr_tank_score <= std_logic_vector(unsigned(internal_curr_tank_score) + to_unsigned(1, SCORE_WIDTH));
         end if;
 
     end process;

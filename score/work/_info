@@ -10,90 +10,135 @@ z2
 cModel Technology
 dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets
 Escore
-Z0 w1700512110
-Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 19
-Z4 dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score
-Z5 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd
-Z6 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd
+Z0 w1700513821
+Z1 DPx4 work 11 score_const 0 22 lG@L:H^R@mRzkhaXTEL:h2
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 25
+Z5 dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score
+Z6 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd
+Z7 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd
 l0
-L7 1
-VzYWFFkWThEfUzZ]<7E[We1
-!s100 cnT[X6h_YR>VW;2Q:`Lo63
-Z7 OV;C;2020.1;71
+L8 1
+V_FELK>_3fUN332Ze@:H[;3
+!s100 PLzdEbkO9XRP]]XBGE<lI2
+Z8 OV;C;2020.1;71
 32
-Z8 !s110 1700512253
+Z9 !s110 1700513826
 !i10b 1
-Z9 !s108 1700512253.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd|
-Z11 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd|
+Z10 !s108 1700513826.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd|
+Z12 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd|
 !i113 1
-Z12 o-work work -2002 -explicit
-Z13 tExplicit 1 CvgOpt 0
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
 Abehavioral
 R1
 R2
 R3
-DEx4 work 5 score 0 22 zYWFFkWThEfUzZ]<7E[We1
-!i122 19
-l21
-L17 22
-VWiVLTS0Q<lCe9Cm`AjO7D0
-!s100 9mlCZY[@0<`Sa8`YfRV9o0
-R7
-32
+R4
+DEx4 work 5 score 0 22 _FELK>_3fUN332Ze@:H[;3
+!i122 25
+l22
+L18 22
+V4HG;G>;1LK4Wo?2Lb72Y61
+!s100 YDzbKDZ[D_KS2LXdeVV4d0
 R8
-!i10b 1
+32
 R9
+!i10b 1
 R10
 R11
-!i113 1
 R12
+!i113 1
 R13
-Escore_tb
-Z14 w1700512249
-Z15 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
-R1
-R2
+R14
+Pscore_const
 R3
-!i122 20
 R4
-Z16 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd
-Z17 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd
+!i122 24
+Z15 w1700513711
+R5
+Z16 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_const.vhd
+Z17 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_const.vhd
 l0
-L7 1
-VUEe6Iz<AT0hLU8bCFEQ020
-!s100 ;4f4;7>7cQ;cfMN?gFY=W0
-R7
-32
+L5 1
+VlG@L:H^R@mRzkhaXTEL:h2
+!s100 3deXLSEEZN2D?R<3XQ`Im3
 R8
-!i10b 1
+32
 R9
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd|
-!s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd|
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_const.vhd|
+Z19 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_const.vhd|
 !i113 1
-R12
 R13
-Abehavioural
-R15
+R14
+Bbody
 R1
+R3
+R4
+!i122 24
+l0
+L10 1
+VXnb@K@d5IE2mgbEia5f2V2
+!s100 ;I`<K2b5<^FCVahVSe6n70
+R8
+32
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Escore_tb
+Z20 w1700513816
+R1
+Z21 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
-DEx4 work 8 score_tb 0 22 UEe6Iz<AT0hLU8bCFEQ020
-!i122 20
-l37
-L11 100
-VBN9d2mLQQkj1X4_CY2[ka3
-!s100 :DJ2MLD[TDH8=[L_9MlR@0
-R7
-32
+R4
+!i122 26
+R5
+Z22 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd
+Z23 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd
+l0
+L8 1
+V2dPLX2_88S4hkz:U?AdCn1
+!s100 cbVoaKFRI:VDFS69g9nW60
 R8
+32
+Z24 !s110 1700513827
 !i10b 1
-R9
-R18
-Z19 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd|
+Z25 !s108 1700513827.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd|
+Z27 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_test.vhd|
 !i113 1
-R12
 R13
+R14
+Abehavioural
+R1
+R21
+R2
+R3
+R4
+DEx4 work 8 score_tb 0 22 2dPLX2_88S4hkz:U?AdCn1
+!i122 26
+l38
+L12 100
+VAF0H=8E47GO3oMATDFBXW1
+!s100 bYF9U0MkFV_eB:7k@HVNz1
+R8
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R13
+R14
