@@ -461,3 +461,82 @@ vsim -gui work.bullets_tb
 # Loading work.bullet(behavioral)
 add wave -r /*
 run
+quit -sim
+# End time: 14:21:01 on Nov 20,2023, Elapsed time: 0:10:36
+# Errors: 0, Warnings: 2
+# Compile of tank_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of bullets_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project score_tb
+# ** Error: Acs sdne.
+# 
+# 
+#        Unable to replace existing ini file (C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_tb.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_tb.mpf).  File can not be renamed.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 3 errors.
+# 2 compiles, 2 failed with 4 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 19 errors.
+# 2 compiles, 2 failed with 20 errors.
+# ** Error: Acs sdne.
+# „
+#        Unable to replace existing ini file (C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_tb.mpf).  File can not be renamed.
+# Compile of score.vhd failed with 1 errors.
+# Compile of score_test.vhd failed with 19 errors.
+# 2 compiles, 2 failed with 20 errors.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd failed with 19 errors.
+# 2 compiles, 1 failed with 19 errors.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd failed with 4 errors.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.score_tb
+# vsim -gui work.score_tb 
+# Start time: 14:31:01 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.score_tb(behavioural)
+# Loading work.score(behavioral)
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -r /*
+run
