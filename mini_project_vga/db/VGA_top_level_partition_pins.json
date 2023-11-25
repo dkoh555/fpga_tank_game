@@ -118,6 +118,238 @@
 				{
 					"name" : "CLOCK_50",
 					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_A_POSX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TANK_B_POSX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_B_POSY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BULL_A_POSY[0]",
+					"strict" : false
 				}
 			]
 		}

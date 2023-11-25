@@ -1,5 +1,5 @@
 Flow report for VGA_top_level
-Mon Nov 20 13:23:38 2023
+Sat Nov 25 15:27:35 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 20 13:23:35 2023          ;
+; Flow Status                        ; Successful - Sat Nov 25 15:27:32 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; VGA_top_level                                  ;
 ; Top-level Entity Name              ; VGA_top_level                                  ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 73 / 114,480 ( < 1 % )                         ;
-;     Total combinational functions  ; 60 / 114,480 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 38 / 114,480 ( < 1 % )                         ;
-; Total registers                    ; 38                                             ;
-; Total pins                         ; 30 / 529 ( 6 % )                               ;
+; Total logic elements               ; 249 / 114,480 ( < 1 % )                        ;
+;     Total combinational functions  ; 242 / 114,480 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 49 / 114,480 ( < 1 % )                         ;
+; Total registers                    ; 49                                             ;
+; Total pins                         ; 88 / 529 ( 17 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 96 / 3,981,312 ( < 1 % )                       ;
+; Total memory bits                  ; 192 / 3,981,312 ( < 1 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
 +------------------------------------+------------------------------------------------+
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/20/2023 13:23:07 ;
+; Start date & time ; 11/25/2023 15:27:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGA_top_level       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1097497353499.170050818709356          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1097497353499.170094762310876          ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -91,11 +91,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4867 MB             ; 00:00:27                           ;
-; Fitter               ; 00:00:13     ; 1.0                     ; 6017 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4718 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4882 MB             ; 00:00:02                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4875 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:17     ; 1.0                     ; 6023 MB             ; 00:00:25                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4897 MB             ; 00:00:02                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
