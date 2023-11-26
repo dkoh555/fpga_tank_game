@@ -23,9 +23,9 @@ begin
 
     process (select_speed) begin
         select select_speed
-            when "00" =>
-                internal_speed <= (others => '0') & "11110100001000111111";
             when "01" =>
+                internal_speed <= (others => '0') & "11110100001000111111";
+            when "10" =>
                 internal_speed <= (others => '0') & "1010001011000010101"
             when others =>
                 internal_speed <= (others => '0') & "111101000010001111";
