@@ -264,15 +264,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "kb_data",
+					"strict" : false
+				},
+				{
 					"name" : "shoot_bullet1",
 					"strict" : false
 				},
 				{
 					"name" : "shoot_bullet2",
-					"strict" : false
-				},
-				{
-					"name" : "kb_data",
 					"strict" : false
 				},
 				{

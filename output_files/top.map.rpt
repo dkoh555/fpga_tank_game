@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon Nov 27 11:57:21 2023
+Mon Nov 27 16:26:13 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -16,23 +16,27 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |top|de2lcd:lcd|next_command
  10. State Machine - |top|de2lcd:lcd|state
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
- 16. Parameter Settings for User Entity Instance: VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "leddcd:dispscore2"
- 19. Port Connectivity Checks: "leddcd:dispscore1"
- 20. Port Connectivity Checks: "VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors"
- 21. Port Connectivity Checks: "tank_speed:move_bullet"
- 22. Port Connectivity Checks: "tank:tank2"
- 23. Port Connectivity Checks: "tank:tank1"
- 24. Port Connectivity Checks: "ps2:keyboard"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 11. State Machine - |top|bullet:bullet2|curr_state
+ 12. State Machine - |top|bullet:bullet1|curr_state
+ 13. State Machine - |top|tank:tank2|curr_state
+ 14. State Machine - |top|tank:tank1|curr_state
+ 15. User-Specified and Inferred Latches
+ 16. Registers Removed During Synthesis
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
+ 21. Parameter Settings for User Entity Instance: VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "leddcd:dispscore2"
+ 24. Port Connectivity Checks: "leddcd:dispscore1"
+ 25. Port Connectivity Checks: "VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors"
+ 26. Port Connectivity Checks: "tank:tank2"
+ 27. Port Connectivity Checks: "tank:tank1"
+ 28. Port Connectivity Checks: "ps2:keyboard"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -59,15 +63,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 27 11:57:21 2023          ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 27 16:26:13 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; top                                            ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 938                                            ;
-;     Total combinational functions  ; 877                                            ;
-;     Dedicated logic registers      ; 321                                            ;
-; Total registers                    ; 321                                            ;
+; Total logic elements               ; 900                                            ;
+;     Total combinational functions  ; 842                                            ;
+;     Dedicated logic registers      ; 208                                            ;
+; Total registers                    ; 208                                            ;
 ; Total pins                         ; 77                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 192                                            ;
@@ -170,13 +174,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processors 3-16        ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -185,13 +189,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path    ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                     ; Library ;
 +-------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
+; move_object/move_object.vhd         ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/move_object/move_object.vhd         ;         ;
 ; mini_project_vga/VGA_top_level.vhd  ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/VGA_top_level.vhd  ;         ;
 ; mini_project_vga/vga_sync.vhd       ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/vga_sync.vhd       ;         ;
 ; mini_project_vga/pixelGenerator.vhd ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/pixelGenerator.vhd ;         ;
 ; mini_project_vga/colorROM.vhd       ; yes             ; User Wizard-Generated File             ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/colorROM.vhd       ;         ;
 ; score/score_stop.vhd                ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_stop.vhd                ;         ;
 ; tanks/tanks.vhd                     ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd                     ;         ;
-; tank_speed/tank_speed.vhd           ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tank_speed/tank_speed.vhd           ;         ;
 ; score/score.vhd                     ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd                     ;         ;
 ; ps2/ps2.vhd                         ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd                         ;         ;
 ; ps2/oneshot.vhd                     ; yes             ; User VHDL File                         ; C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/oneshot.vhd                     ;         ;
@@ -217,37 +221,37 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 938       ;
-;                                             ;           ;
-; Total combinational functions               ; 877       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 193       ;
-;     -- 3 input functions                    ; 220       ;
-;     -- <=2 input functions                  ; 464       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 392       ;
-;     -- arithmetic mode                      ; 485       ;
-;                                             ;           ;
-; Total registers                             ; 321       ;
-;     -- Dedicated logic registers            ; 321       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 77        ;
-; Total memory bits                           ; 192       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 126       ;
-; Total fan-out                               ; 3537      ;
-; Average fan-out                             ; 2.56      ;
-+---------------------------------------------+-----------+
++----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                        ;
++---------------------------------------------+------------------------------------------------------+
+; Resource                                    ; Usage                                                ;
++---------------------------------------------+------------------------------------------------------+
+; Estimated Total logic elements              ; 900                                                  ;
+;                                             ;                                                      ;
+; Total combinational functions               ; 842                                                  ;
+; Logic element usage by number of LUT inputs ;                                                      ;
+;     -- 4 input functions                    ; 159                                                  ;
+;     -- 3 input functions                    ; 263                                                  ;
+;     -- <=2 input functions                  ; 420                                                  ;
+;                                             ;                                                      ;
+; Logic elements by mode                      ;                                                      ;
+;     -- normal mode                          ; 408                                                  ;
+;     -- arithmetic mode                      ; 434                                                  ;
+;                                             ;                                                      ;
+; Total registers                             ; 208                                                  ;
+;     -- Dedicated logic registers            ; 208                                                  ;
+;     -- I/O registers                        ; 0                                                    ;
+;                                             ;                                                      ;
+; I/O pins                                    ; 77                                                   ;
+; Total memory bits                           ; 192                                                  ;
+;                                             ;                                                      ;
+; Embedded Multiplier 9-bit elements          ; 0                                                    ;
+;                                             ;                                                      ;
+; Maximum fan-out node                        ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ;
+; Maximum fan-out                             ; 71                                                   ;
+; Total fan-out                               ; 2989                                                 ;
+; Average fan-out                             ; 2.42                                                 ;
++---------------------------------------------+------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -255,32 +259,30 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                            ; 877 (0)             ; 321 (0)                   ; 192         ; 0            ; 0       ; 0         ; 77   ; 0            ; |top                                                                                                                          ; top             ; work         ;
-;    |VGA_top_level:vga|                          ; 324 (0)             ; 49 (0)                    ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga                                                                                                        ; VGA_top_level   ; work         ;
+; |top                                            ; 842 (0)             ; 208 (0)                   ; 192         ; 0            ; 0       ; 0         ; 77   ; 0            ; |top                                                                                                                          ; top             ; work         ;
+;    |VGA_top_level:vga|                          ; 322 (0)             ; 49 (0)                    ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga                                                                                                        ; VGA_top_level   ; work         ;
 ;       |VGA_SYNC:videoSync|                      ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga|VGA_SYNC:videoSync                                                                                     ; VGA_SYNC        ; work         ;
-;       |pixelGenerator:videoGen|                 ; 265 (265)           ; 3 (3)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
+;       |pixelGenerator:videoGen|                 ; 263 (263)           ; 3 (3)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors                                                                ; colorROM        ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;                |altsyncram_b481:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated ; altsyncram_b481 ; work         ;
-;    |bullet:bullet1|                             ; 105 (105)           ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bullet:bullet1                                                                                                           ; bullet          ; work         ;
-;    |bullet:bullet2|                             ; 105 (105)           ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bullet:bullet2                                                                                                           ; bullet          ; work         ;
-;    |de2lcd:lcd|                                 ; 94 (94)             ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|de2lcd:lcd                                                                                                               ; de2lcd          ; work         ;
+;    |bullet:bullet1|                             ; 93 (93)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bullet:bullet1                                                                                                           ; bullet          ; work         ;
+;    |bullet:bullet2|                             ; 93 (93)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bullet:bullet2                                                                                                           ; bullet          ; work         ;
+;    |de2lcd:lcd|                                 ; 95 (95)             ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|de2lcd:lcd                                                                                                               ; de2lcd          ; work         ;
 ;    |gamestate:state|                            ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|gamestate:state                                                                                                          ; gamestate       ; work         ;
 ;    |leddcd:dispscore1|                          ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|leddcd:dispscore1                                                                                                        ; leddcd          ; work         ;
 ;    |leddcd:dispscore2|                          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|leddcd:dispscore2                                                                                                        ; leddcd          ; work         ;
-;    |ps2:keyboard|                               ; 34 (12)             ; 48 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard                                                                                                             ; ps2             ; work         ;
+;    |move_object:move_bullet|                    ; 28 (28)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|move_object:move_bullet                                                                                                  ; move_object     ; work         ;
+;    |ps2:keyboard|                               ; 37 (12)             ; 48 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard                                                                                                             ; ps2             ; work         ;
 ;       |keyboard:u1|                             ; 17 (17)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard|keyboard:u1                                                                                                 ; keyboard        ; work         ;
-;       |leddcd:speeddisp1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard|leddcd:speeddisp1                                                                                           ; leddcd          ; work         ;
-;       |leddcd:speeddisp2|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard|leddcd:speeddisp2                                                                                           ; leddcd          ; work         ;
+;       |leddcd:speeddisp1|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard|leddcd:speeddisp1                                                                                           ; leddcd          ; work         ;
+;       |leddcd:speeddisp2|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard|leddcd:speeddisp2                                                                                           ; leddcd          ; work         ;
 ;       |oneshot:pulser|                          ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2:keyboard|oneshot:pulser                                                                                              ; oneshot         ; work         ;
 ;    |score:tank1score|                           ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|score:tank1score                                                                                                         ; score           ; work         ;
 ;    |score:tank2score|                           ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|score:tank2score                                                                                                         ; score           ; work         ;
 ;    |score_stop:stop|                            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|score_stop:stop                                                                                                          ; score_stop      ; work         ;
-;    |tank:tank1|                                 ; 55 (55)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank:tank1                                                                                                               ; tank            ; work         ;
-;    |tank:tank2|                                 ; 55 (55)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank:tank2                                                                                                               ; tank            ; work         ;
-;    |tank_speed:move_bullet|                     ; 29 (29)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank_speed:move_bullet                                                                                                   ; tank_speed      ; work         ;
-;    |tank_speed:move_tank1|                      ; 32 (32)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank_speed:move_tank1                                                                                                    ; tank_speed      ; work         ;
-;    |tank_speed:move_tank2|                      ; 31 (31)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank_speed:move_tank2                                                                                                    ; tank_speed      ; work         ;
+;    |tank:tank1|                                 ; 81 (81)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank:tank1                                                                                                               ; tank            ; work         ;
+;    |tank:tank2|                                 ; 80 (80)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tank:tank2                                                                                                               ; tank            ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -354,22 +356,197 @@ Encoding Type:  One-Hot
 +---------------------+---------------------+-------------------+--------------+--------------+------------+----------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+----------------+------------------+----------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+---------------------------------------------------+------------------------------------------+
-; Register name                                     ; Reason for Removal                       ;
-+---------------------------------------------------+------------------------------------------+
-; de2lcd:lcd|LCD_RW                                 ; Stuck at GND due to stuck port data_in   ;
-; ps2:keyboard|speed1inner[3]                       ; Merged with ps2:keyboard|speed1inner[2]  ;
-; ps2:keyboard|speed2inner[3]                       ; Merged with ps2:keyboard|speed2inner[2]  ;
-; ps2:keyboard|speed1inner[2]                       ; Stuck at GND due to stuck port data_in   ;
-; ps2:keyboard|speed2inner[2]                       ; Stuck at GND due to stuck port data_in   ;
-; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_row[9] ; Stuck at GND due to stuck port data_in   ;
-; de2lcd:lcd|next_command.RESET1                    ; Merged with de2lcd:lcd|next_command.HOLD ;
-; de2lcd:lcd|next_command.TOGGLE_E                  ; Merged with de2lcd:lcd|next_command.HOLD ;
-; de2lcd:lcd|next_command.HOLD                      ; Stuck at GND due to stuck port data_in   ;
-; Total Number of Removed Registers = 9             ;                                          ;
-+---------------------------------------------------+------------------------------------------+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |top|bullet:bullet2|curr_state                                     ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; curr_state.s_d ; curr_state.s_c ; curr_state.s_b ; curr_state.s_a ;
++----------------+----------------+----------------+----------------+----------------+
+; curr_state.s_a ; 0              ; 0              ; 0              ; 0              ;
+; curr_state.s_b ; 0              ; 0              ; 1              ; 1              ;
+; curr_state.s_c ; 0              ; 1              ; 0              ; 1              ;
+; curr_state.s_d ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |top|bullet:bullet1|curr_state                                     ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; curr_state.s_d ; curr_state.s_c ; curr_state.s_b ; curr_state.s_a ;
++----------------+----------------+----------------+----------------+----------------+
+; curr_state.s_a ; 0              ; 0              ; 0              ; 0              ;
+; curr_state.s_b ; 0              ; 0              ; 1              ; 1              ;
+; curr_state.s_c ; 0              ; 1              ; 0              ; 1              ;
+; curr_state.s_d ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|tank:tank2|curr_state                                                                                    ;
++-----------------------+-----------------------+----------------------+-------------------+-----------------+------------------+
+; Name                  ; curr_state.move_right ; curr_state.move_left ; curr_state.update ; curr_state.idle ; curr_state.reset ;
++-----------------------+-----------------------+----------------------+-------------------+-----------------+------------------+
+; curr_state.reset      ; 0                     ; 0                    ; 0                 ; 0               ; 0                ;
+; curr_state.idle       ; 0                     ; 0                    ; 0                 ; 1               ; 1                ;
+; curr_state.update     ; 0                     ; 0                    ; 1                 ; 0               ; 1                ;
+; curr_state.move_left  ; 0                     ; 1                    ; 0                 ; 0               ; 1                ;
+; curr_state.move_right ; 1                     ; 0                    ; 0                 ; 0               ; 1                ;
++-----------------------+-----------------------+----------------------+-------------------+-----------------+------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|tank:tank1|curr_state                                                                                    ;
++-----------------------+-----------------------+----------------------+-------------------+-----------------+------------------+
+; Name                  ; curr_state.move_right ; curr_state.move_left ; curr_state.update ; curr_state.idle ; curr_state.reset ;
++-----------------------+-----------------------+----------------------+-------------------+-----------------+------------------+
+; curr_state.reset      ; 0                     ; 0                    ; 0                 ; 0               ; 0                ;
+; curr_state.idle       ; 0                     ; 0                    ; 0                 ; 1               ; 1                ;
+; curr_state.update     ; 0                     ; 0                    ; 1                 ; 0               ; 1                ;
+; curr_state.move_left  ; 0                     ; 1                    ; 0                 ; 0               ; 1                ;
+; curr_state.move_right ; 1                     ; 0                    ; 0                 ; 0               ; 1                ;
++-----------------------+-----------------------+----------------------+-------------------+-----------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; tank:tank2|internal_tank_x[9]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[8]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[7]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[6]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[5]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[4]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[3]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[2]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[1]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank2|internal_tank_x[0]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[9]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[8]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[7]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[6]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[5]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[4]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[3]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[2]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[1]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|internal_tank_x[0]                       ; tank:tank2|internal_tank_x    ; yes                    ;
+; bullet:bullet1|curr_bullet_x[9]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[8]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[7]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[6]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[5]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[4]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[3]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[2]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[1]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_x[0]                     ; bullet:bullet1|curr_bullet_x  ; yes                    ;
+; bullet:bullet1|curr_bullet_y[8]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[7]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[6]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[5]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[4]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[3]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[2]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[1]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[0]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet1|curr_bullet_y[9]                     ; bullet:bullet1|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_x[9]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[8]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[7]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[6]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[5]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[4]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[3]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[2]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[1]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_x[0]                     ; bullet:bullet2|curr_bullet_x  ; yes                    ;
+; bullet:bullet2|curr_bullet_y[8]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[7]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[6]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[5]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[4]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[3]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[2]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[1]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[0]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; bullet:bullet2|curr_bullet_y[9]                     ; bullet:bullet2|curr_state.s_b ; yes                    ;
+; tank:tank2|new_direction                            ; tank:tank2|internal_tank_x    ; yes                    ;
+; tank:tank1|new_direction                            ; tank:tank2|internal_tank_x    ; yes                    ;
+; Number of user-specified and inferred latches = 62  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++---------------------------------------------------+-------------------------------------------------+
+; Register name                                     ; Reason for Removal                              ;
++---------------------------------------------------+-------------------------------------------------+
+; de2lcd:lcd|LCD_RW                                 ; Stuck at GND due to stuck port data_in          ;
+; ps2:keyboard|speed1inner[3]                       ; Merged with ps2:keyboard|speed1inner[2]         ;
+; ps2:keyboard|speed2inner[3]                       ; Merged with ps2:keyboard|speed2inner[2]         ;
+; move_object:move_tank1|pulse                      ; Merged with move_object:move_bullet|pulse       ;
+; move_object:move_tank2|pulse                      ; Merged with move_object:move_bullet|pulse       ;
+; move_object:move_tank1|counter[20]                ; Merged with move_object:move_bullet|counter[20] ;
+; move_object:move_tank2|counter[20]                ; Merged with move_object:move_bullet|counter[20] ;
+; move_object:move_tank1|counter[19]                ; Merged with move_object:move_bullet|counter[19] ;
+; move_object:move_tank2|counter[19]                ; Merged with move_object:move_bullet|counter[19] ;
+; move_object:move_tank1|counter[18]                ; Merged with move_object:move_bullet|counter[18] ;
+; move_object:move_tank2|counter[18]                ; Merged with move_object:move_bullet|counter[18] ;
+; move_object:move_tank1|counter[17]                ; Merged with move_object:move_bullet|counter[17] ;
+; move_object:move_tank2|counter[17]                ; Merged with move_object:move_bullet|counter[17] ;
+; move_object:move_tank1|counter[16]                ; Merged with move_object:move_bullet|counter[16] ;
+; move_object:move_tank2|counter[16]                ; Merged with move_object:move_bullet|counter[16] ;
+; move_object:move_tank1|counter[15]                ; Merged with move_object:move_bullet|counter[15] ;
+; move_object:move_tank2|counter[15]                ; Merged with move_object:move_bullet|counter[15] ;
+; move_object:move_tank1|counter[14]                ; Merged with move_object:move_bullet|counter[14] ;
+; move_object:move_tank2|counter[14]                ; Merged with move_object:move_bullet|counter[14] ;
+; move_object:move_tank1|counter[13]                ; Merged with move_object:move_bullet|counter[13] ;
+; move_object:move_tank2|counter[13]                ; Merged with move_object:move_bullet|counter[13] ;
+; move_object:move_tank1|counter[12]                ; Merged with move_object:move_bullet|counter[12] ;
+; move_object:move_tank2|counter[12]                ; Merged with move_object:move_bullet|counter[12] ;
+; move_object:move_tank1|counter[11]                ; Merged with move_object:move_bullet|counter[11] ;
+; move_object:move_tank2|counter[11]                ; Merged with move_object:move_bullet|counter[11] ;
+; move_object:move_tank1|counter[10]                ; Merged with move_object:move_bullet|counter[10] ;
+; move_object:move_tank2|counter[10]                ; Merged with move_object:move_bullet|counter[10] ;
+; move_object:move_tank1|counter[9]                 ; Merged with move_object:move_bullet|counter[9]  ;
+; move_object:move_tank2|counter[9]                 ; Merged with move_object:move_bullet|counter[9]  ;
+; move_object:move_tank1|counter[8]                 ; Merged with move_object:move_bullet|counter[8]  ;
+; move_object:move_tank2|counter[8]                 ; Merged with move_object:move_bullet|counter[8]  ;
+; move_object:move_tank1|counter[7]                 ; Merged with move_object:move_bullet|counter[7]  ;
+; move_object:move_tank2|counter[7]                 ; Merged with move_object:move_bullet|counter[7]  ;
+; move_object:move_tank1|counter[6]                 ; Merged with move_object:move_bullet|counter[6]  ;
+; move_object:move_tank2|counter[6]                 ; Merged with move_object:move_bullet|counter[6]  ;
+; move_object:move_tank1|counter[5]                 ; Merged with move_object:move_bullet|counter[5]  ;
+; move_object:move_tank2|counter[5]                 ; Merged with move_object:move_bullet|counter[5]  ;
+; move_object:move_tank1|counter[4]                 ; Merged with move_object:move_bullet|counter[4]  ;
+; move_object:move_tank2|counter[4]                 ; Merged with move_object:move_bullet|counter[4]  ;
+; move_object:move_tank1|counter[3]                 ; Merged with move_object:move_bullet|counter[3]  ;
+; move_object:move_tank2|counter[3]                 ; Merged with move_object:move_bullet|counter[3]  ;
+; move_object:move_tank1|counter[2]                 ; Merged with move_object:move_bullet|counter[2]  ;
+; move_object:move_tank2|counter[2]                 ; Merged with move_object:move_bullet|counter[2]  ;
+; move_object:move_tank1|counter[1]                 ; Merged with move_object:move_bullet|counter[1]  ;
+; move_object:move_tank2|counter[1]                 ; Merged with move_object:move_bullet|counter[1]  ;
+; move_object:move_tank1|counter[0]                 ; Merged with move_object:move_bullet|counter[0]  ;
+; move_object:move_tank2|counter[0]                 ; Merged with move_object:move_bullet|counter[0]  ;
+; ps2:keyboard|speed1inner[2]                       ; Stuck at GND due to stuck port data_in          ;
+; ps2:keyboard|speed2inner[2]                       ; Stuck at GND due to stuck port data_in          ;
+; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_row[9] ; Stuck at GND due to stuck port data_in          ;
+; tank:tank2|curr_state.move_right                  ; Lost fanout                                     ;
+; tank:tank1|curr_state.move_right                  ; Lost fanout                                     ;
+; de2lcd:lcd|next_command.RESET1                    ; Merged with de2lcd:lcd|next_command.HOLD        ;
+; de2lcd:lcd|next_command.TOGGLE_E                  ; Merged with de2lcd:lcd|next_command.HOLD        ;
+; tank:tank2|curr_state.reset                       ; Merged with tank:tank1|curr_state.reset         ;
+; tank:tank2|curr_state.idle                        ; Merged with tank:tank1|curr_state.idle          ;
+; tank:tank2|curr_state.update                      ; Merged with tank:tank1|curr_state.update        ;
+; de2lcd:lcd|next_command.HOLD                      ; Stuck at GND due to stuck port data_in          ;
+; Total Number of Removed Registers = 58            ;                                                 ;
++---------------------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -377,38 +554,25 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 321   ;
-; Number of registers using Synchronous Clear  ; 97    ;
+; Total registers                              ; 208   ;
+; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 156   ;
+; Number of registers using Asynchronous Clear ; 45    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 101   ;
+; Number of registers using Clock Enable       ; 58    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; tank:tank1|internal_tank_x[8]           ; 10      ;
-; tank:tank1|internal_tank_x[6]           ; 10      ;
-; tank:tank2|internal_tank_x[8]           ; 10      ;
-; tank:tank2|internal_tank_x[6]           ; 10      ;
-; ps2:keyboard|speed1inner[0]             ; 5       ;
-; ps2:keyboard|speed2inner[0]             ; 5       ;
-; bullet:bullet1|curr_bullet_y[8]         ; 6       ;
-; bullet:bullet1|curr_bullet_y[7]         ; 6       ;
-; bullet:bullet1|curr_bullet_y[5]         ; 6       ;
-; bullet:bullet1|curr_bullet_y[3]         ; 8       ;
-; bullet:bullet1|curr_bullet_y[2]         ; 6       ;
-; bullet:bullet1|curr_bullet_y[1]         ; 6       ;
-; bullet:bullet2|curr_bullet_y[5]         ; 6       ;
-; bullet:bullet2|curr_bullet_y[4]         ; 6       ;
-; bullet:bullet2|curr_bullet_y[1]         ; 5       ;
-; Total number of inverted registers = 15 ;         ;
-+-----------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ps2:keyboard|speed1inner[0]            ; 5       ;
+; ps2:keyboard|speed2inner[0]            ; 5       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -416,18 +580,18 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|VGA_top_level:vga|VGA_SYNC:videoSync|v_count[9] ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|de2lcd:lcd|CLK_COUNT_400HZ[16]                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|ps2:keyboard|keyboard:u1|INCNT[3]               ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|bullet:bullet1|curr_bullet_y[9]                 ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|bullet:bullet2|curr_bullet_y[6]                 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp1|segments_out[2]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp1|segments_out[4]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp2|segments_out[2]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore1|segments_out[2]               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|VGA_top_level:vga|VGA_SYNC:videoSync|v_count[0] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|de2lcd:lcd|CLK_COUNT_400HZ[0]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|ps2:keyboard|keyboard:u1|INCNT[0]               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp1|segments_out[3]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp1|segments_out[5]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp2|segments_out[3]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore1|segments_out[3]               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore1|segments_out[4]               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore2|segments_out[2]               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore2|segments_out[4]               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore2|segments_out[3]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|leddcd:dispscore2|segments_out[5]               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|bullet:bullet2|Selector5                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|bullet:bullet1|Selector5                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -550,23 +714,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "tank_speed:move_bullet" ;
-+-----------------+-------+----------+---------------+
-; Port            ; Type  ; Severity ; Details       ;
-+-----------------+-------+----------+---------------+
-; select_speed[1] ; Input ; Info     ; Stuck at GND  ;
-; select_speed[0] ; Input ; Info     ; Stuck at VCC  ;
-+-----------------+-------+----------+---------------+
-
-
 +---------------------------------------------------+
 ; Port Connectivity Checks: "tank:tank2"            ;
 +-----------------+-------+----------+--------------+
 ; Port            ; Type  ; Severity ; Details      ;
 +-----------------+-------+----------+--------------+
-; tank_in_y[4..1] ; Input ; Info     ; Stuck at VCC ;
-; tank_in_y[9..5] ; Input ; Info     ; Stuck at GND ;
+; tank_in_y[8..6] ; Input ; Info     ; Stuck at VCC ;
+; tank_in_y[5..2] ; Input ; Info     ; Stuck at GND ;
+; tank_in_y[9]    ; Input ; Info     ; Stuck at GND ;
+; tank_in_y[1]    ; Input ; Info     ; Stuck at VCC ;
 ; tank_in_y[0]    ; Input ; Info     ; Stuck at GND ;
 +-----------------+-------+----------+--------------+
 
@@ -599,29 +755,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 77                          ;
-; cycloneiii_ff         ; 321                         ;
-;     CLR               ; 33                          ;
-;     CLR SCLR          ; 75                          ;
-;     ENA               ; 53                          ;
-;     ENA CLR           ; 48                          ;
+; cycloneiii_ff         ; 208                         ;
+;     CLR               ; 41                          ;
+;     ENA               ; 54                          ;
+;     ENA CLR           ; 4                           ;
 ;     SCLR              ; 22                          ;
-;     plain             ; 90                          ;
+;     plain             ; 87                          ;
 ; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 887                         ;
-;     arith             ; 485                         ;
+; cycloneiii_lcell_comb ; 851                         ;
+;     arith             ; 434                         ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 313                         ;
-;         3 data inputs ; 166                         ;
-;     normal            ; 402                         ;
+;         2 data inputs ; 259                         ;
+;         3 data inputs ; 169                         ;
+;     normal            ; 417                         ;
 ;         0 data inputs ; 18                          ;
-;         1 data inputs ; 29                          ;
-;         2 data inputs ; 108                         ;
-;         3 data inputs ; 54                          ;
-;         4 data inputs ; 193                         ;
+;         1 data inputs ; 27                          ;
+;         2 data inputs ; 119                         ;
+;         3 data inputs ; 94                          ;
+;         4 data inputs ; 159                         ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.80                        ;
-; Average LUT depth     ; 4.82                        ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 4.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -630,7 +785,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -640,10 +795,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 27 11:57:06 2023
+    Info: Processing started: Mon Nov 27 16:26:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file move_object/move_object.vhd
+    Info (12022): Found design unit 1: move_object-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/move_object/move_object.vhd Line: 15
+    Info (12023): Found entity 1: move_object File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/move_object/move_object.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mini_project_vga/vga_top_level.vhd
     Info (12022): Found design unit 1: VGA_top_level-structural File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/VGA_top_level.vhd Line: 25
     Info (12023): Found entity 1: VGA_top_level File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/VGA_top_level.vhd Line: 6
@@ -660,11 +818,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file score/s
     Info (12022): Found design unit 1: score_stop-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_stop.vhd Line: 20
     Info (12023): Found entity 1: score_stop File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score_stop.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file tanks/tanks.vhd
-    Info (12022): Found design unit 1: tank-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 20
+    Info (12022): Found design unit 1: tank-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 22
     Info (12023): Found entity 1: tank File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file tank_speed/tank_speed.vhd
-    Info (12022): Found design unit 1: tank_speed-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tank_speed/tank_speed.vhd Line: 16
-    Info (12023): Found entity 1: tank_speed File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tank_speed/tank_speed.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file score/score.vhd
     Info (12022): Found design unit 1: score-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd Line: 18
     Info (12023): Found entity 1: score File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd Line: 8
@@ -696,14 +851,14 @@ Info (12021): Found 2 design units, including 0 entities, in source file bullets
     Info (12022): Found design unit 1: tank_const File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd Line: 5
     Info (12022): Found design unit 2: tank_const-body File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file bullets/bullets.vhd
-    Info (12022): Found design unit 1: bullet-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 27
+    Info (12022): Found design unit 1: bullet-behavioral File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 28
     Info (12023): Found entity 1: bullet File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
     Info (12022): Found design unit 1: top-structural File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 40
     Info (12023): Found entity 1: top File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 8
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.vhd(178): object "inter_key" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 178
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:keyboard" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 218
+Warning (10036): Verilog HDL or VHDL warning at top.vhd(180): object "inter_key" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 180
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:keyboard" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 220
 Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(50): object "hist3" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 50
 Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(51): object "hist2" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 51
 Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(52): object "hist1" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 52
@@ -713,22 +868,78 @@ Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(55): object "scan_readyo
 Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:keyboard|keyboard:u1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 59
 Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:keyboard|oneshot:pulser" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 69
 Info (12128): Elaborating entity "leddcd" for hierarchy "ps2:keyboard|leddcd:speeddisp1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 131
-Info (12128): Elaborating entity "tank_speed" for hierarchy "tank_speed:move_tank1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 231
+Info (12128): Elaborating entity "move_object" for hierarchy "move_object:move_tank1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 233
 Info (12128): Elaborating entity "tank" for hierarchy "tank:tank1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 247
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 275
-Warning (10492): VHDL Process Statement warning at bullets.vhd(84): signal "curr_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at bullets.vhd(86): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at bullets.vhd(87): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at bullets.vhd(89): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at bullets.vhd(94): signal "internal_hit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at bullets.vhd(97): signal "curr_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at bullets.vhd(99): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at bullets.vhd(100): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at bullets.vhd(102): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 102
-Info (12128): Elaborating entity "score" for hierarchy "score:tank1score" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 303
-Info (12128): Elaborating entity "gamestate" for hierarchy "gamestate:state" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 317
-Info (12128): Elaborating entity "score_stop" for hierarchy "score_stop:stop" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 326
-Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vga" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 335
+Warning (10036): Verilog HDL or VHDL warning at tanks.vhd(27): object "direction" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 27
+Warning (10036): Verilog HDL or VHDL warning at tanks.vhd(30): object "resized" assigned a value but never read File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at tanks.vhd(47): signal "internal_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at tanks.vhd(48): signal "new_direction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at tanks.vhd(75): signal "internal_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at tanks.vhd(75): signal "new_direction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at tanks.vhd(76): signal "internal_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at tanks.vhd(76): signal "new_direction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at tanks.vhd(86): signal "internal_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at tanks.vhd(92): signal "internal_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at tanks.vhd(46): inferring latch(es) for signal or variable "internal_tank_x", which holds its previous value in one or more paths through the process File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at tanks.vhd(46): inferring latch(es) for signal or variable "new_direction", which holds its previous value in one or more paths through the process File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "new_direction" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[0]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[1]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[2]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[3]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[4]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[5]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[6]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[7]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[8]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (10041): Inferred latch for "internal_tank_x[9]" at tanks.vhd(46) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd Line: 46
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 276
+Warning (10492): VHDL Process Statement warning at bullets.vhd(68): signal "curr_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 68
+Warning (10492): VHDL Process Statement warning at bullets.vhd(69): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at bullets.vhd(80): signal "curr_bullet_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at bullets.vhd(81): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
+Warning (10492): VHDL Process Statement warning at bullets.vhd(90): signal "curr_bullet_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at bullets.vhd(92): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at bullets.vhd(93): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at bullets.vhd(96): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at bullets.vhd(101): signal "other_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at bullets.vhd(101): signal "other_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at bullets.vhd(101): signal "curr_bullet_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at bullets.vhd(101): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at bullets.vhd(104): signal "curr_bullet_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at bullets.vhd(105): signal "curr_bullet_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at bullets.vhd(106): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at bullets.vhd(107): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at bullets.vhd(115): signal "curr_tank_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at bullets.vhd(116): signal "curr_tank_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at bullets.vhd(121): signal "curr_bullet_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at bullets.vhd(122): signal "curr_bullet_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 122
+Warning (10631): VHDL Process Statement warning at bullets.vhd(60): inferring latch(es) for signal or variable "curr_bullet_x", which holds its previous value in one or more paths through the process File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Warning (10631): VHDL Process Statement warning at bullets.vhd(60): inferring latch(es) for signal or variable "curr_bullet_y", which holds its previous value in one or more paths through the process File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[0]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[1]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[2]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[3]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[4]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[5]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[6]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[7]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[8]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_y[9]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[0]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[1]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[2]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[3]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[4]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[5]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[6]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[7]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[8]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (10041): Inferred latch for "curr_bullet_x[9]" at bullets.vhd(60) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 60
+Info (12128): Elaborating entity "score" for hierarchy "score:tank1score" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 306
+Info (12128): Elaborating entity "gamestate" for hierarchy "gamestate:state" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 320
+Info (12128): Elaborating entity "score_stop" for hierarchy "score_stop:stop" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 329
+Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vga" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 338
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:vga|pixelGenerator:videoGen" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/VGA_top_level.vhd Line: 60
 Info (12128): Elaborating entity "colorROM" for hierarchy "VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/pixelGenerator.vhd Line: 71
 Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/colorROM.vhd Line: 84
@@ -751,7 +962,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_b481 File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/db/altsyncram_b481.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_b481" for hierarchy "VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:vga|VGA_SYNC:videoSync" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/mini_project_vga/VGA_top_level.vhd Line: 88
-Info (12128): Elaborating entity "de2lcd" for hierarchy "de2lcd:lcd" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 357
+Info (12128): Elaborating entity "de2lcd" for hierarchy "de2lcd:lcd" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 360
 Warning (10541): VHDL Signal Declaration warning at de2lcd.vhd(9): used implicit default value for signal "SEC_LED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/lcd/de2lcd.vhd Line: 9
 Warning (10631): VHDL Process Statement warning at de2lcd.vhd(47): inferring latch(es) for signal or variable "init", which holds its previous value in one or more paths through the process File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/lcd/de2lcd.vhd Line: 47
 Info (10041): Inferred latch for "init" at de2lcd.vhd(51) File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/lcd/de2lcd.vhd Line: 51
@@ -765,29 +976,6 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "VGA_top_level:vga|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated|q_a[29]" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/db/altsyncram_b481.tdf Line: 615
 Info (13000): Registers with preset signals will power-up high File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/ps2/ps2.vhd Line: 95
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[9]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[9]~_emulated" and latch "bullet:bullet1|curr_bullet_x[9]~1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[8]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[8]~_emulated" and latch "bullet:bullet1|curr_bullet_x[8]~5" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[7]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[7]~_emulated" and latch "bullet:bullet1|curr_bullet_x[7]~9" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[6]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[6]~_emulated" and latch "bullet:bullet1|curr_bullet_x[6]~13" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[5]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[5]~_emulated" and latch "bullet:bullet1|curr_bullet_x[5]~17" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[4]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[4]~_emulated" and latch "bullet:bullet1|curr_bullet_x[4]~21" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[3]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[3]~_emulated" and latch "bullet:bullet1|curr_bullet_x[3]~25" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[2]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[2]~_emulated" and latch "bullet:bullet1|curr_bullet_x[2]~29" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[1]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[1]~_emulated" and latch "bullet:bullet1|curr_bullet_x[1]~33" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|curr_bullet_x[0]" is converted into an equivalent circuit using register "bullet:bullet1|curr_bullet_x[0]~_emulated" and latch "bullet:bullet1|curr_bullet_x[0]~37" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[9]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[9]~_emulated" and latch "bullet:bullet2|curr_bullet_x[9]~1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[8]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[8]~_emulated" and latch "bullet:bullet2|curr_bullet_x[8]~5" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[7]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[7]~_emulated" and latch "bullet:bullet2|curr_bullet_x[7]~9" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[6]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[6]~_emulated" and latch "bullet:bullet2|curr_bullet_x[6]~13" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[5]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[5]~_emulated" and latch "bullet:bullet2|curr_bullet_x[5]~17" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[4]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[4]~_emulated" and latch "bullet:bullet2|curr_bullet_x[4]~21" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[3]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[3]~_emulated" and latch "bullet:bullet2|curr_bullet_x[3]~25" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[2]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[2]~_emulated" and latch "bullet:bullet2|curr_bullet_x[2]~29" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[1]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[1]~_emulated" and latch "bullet:bullet2|curr_bullet_x[1]~33" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet2|curr_bullet_x[0]" is converted into an equivalent circuit using register "bullet:bullet2|curr_bullet_x[0]~_emulated" and latch "bullet:bullet2|curr_bullet_x[0]~37" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 81
-    Warning (13310): Register "bullet:bullet1|internal_bullet_valid" is converted into an equivalent circuit using register "bullet:bullet1|internal_bullet_valid~_emulated" and latch "bullet:bullet1|internal_bullet_valid~1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 29
-    Warning (13310): Register "bullet:bullet2|internal_bullet_valid" is converted into an equivalent circuit using register "bullet:bullet2|internal_bullet_valid~_emulated" and latch "bullet:bullet2|internal_bullet_valid~1" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd Line: 29
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "de2lcd:lcd|DATA_BUS[0]~synth" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/lcd/de2lcd.vhd Line: 11
     Warning (13010): Node "de2lcd:lcd|DATA_BUS[1]~synth" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/lcd/de2lcd.vhd Line: 11
@@ -806,20 +994,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "p1_score[1]" is stuck at GND File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 35
     Warning (13410): Pin "p2_score[1]" is stuck at GND File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 36
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rst_n" File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/top.vhd Line: 21
-Info (21057): Implemented 1047 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1005 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 62 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 946 logic cells
+    Info (21061): Implemented 904 logic cells
     Info (21064): Implemented 24 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4904 megabytes
-    Info: Processing ended: Mon Nov 27 11:57:21 2023
-    Info: Elapsed time: 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Mon Nov 27 16:26:13 2023
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:11
 
 

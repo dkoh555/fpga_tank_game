@@ -219,3 +219,5 @@ vsim -gui work.tanks_tb
 # Loading work.tank(behavioral)
 add wave -r /*
 run
+# End time: 16:15:41 on Nov 27,2023, Elapsed time: 0:09:43
+# Errors: 0, Warnings: 2

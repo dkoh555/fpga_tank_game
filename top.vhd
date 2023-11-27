@@ -42,32 +42,35 @@ architecture structural of top is
     -- Tank component
     component tank is
         port (
-            -- Inputs
-            clk : in std_logic;
-            rst : in std_logic;
-            tank_in_y : in std_logic_vector (9 downto 0);
-            tank_move : in std_logic;
-            tank_out_y : out std_logic_vector (9 downto 0);
-            tank_out_x : out std_logic_vector (9 downto 0)
-        );
+			-- Inputs
+			clk : in std_logic;
+			rst : in std_logic;
+			tank_in_y : in std_logic_vector (9 downto 0);
+			pulse : in std_logic;
+			speed : in std_logic_vector (1 downto 0);
+			-- Outputs
+			tank_out_y : out std_logic_vector (9 downto 0);
+			tank_out_x : out std_logic_vector (9 downto 0)
+    	);
     end component tank;
 
     -- Bullet component
     component bullet is
         port (
-            -- Inputs
-            bullet_move : in std_logic;
-            rst : in std_logic;
-            shoot : in std_logic;
-            curr_tank_x : in std_logic_vector (9 downto 0);
-            curr_tank_y : in std_logic_vector (9 downto 0);
-            other_tank_x : in std_logic_vector (9 downto 0);
-            other_tank_y : in std_logic_vector (9 downto 0);
-            -- Outputs
-            bullet_x : out std_logic_vector (9 downto 0);
-            bullet_y: out std_logic_vector (9 downto 0);
-            hit : out std_logic
-        );
+			-- Inputs
+			clk : in std_logic;
+			pulse : in std_logic; -- If pulse 1, move bullet
+			rst : in std_logic;
+			shoot : in std_logic;
+			curr_tank_x : in std_logic_vector (9 downto 0);
+			curr_tank_y : in std_logic_vector (9 downto 0);
+			other_tank_x : in std_logic_vector (9 downto 0);
+			other_tank_y : in std_logic_vector (9 downto 0);
+			-- Outputs
+			bullet_x : out std_logic_vector (9 downto 0);
+			bullet_y: out std_logic_vector (9 downto 0);
+			hit : out std_logic
+		);
     end component bullet;
 
     -- Score component
@@ -134,14 +137,13 @@ architecture structural of top is
 	 end component ps2;
 	 
 	 -- Tank Speed component	 
-	component tank_speed is
+	component move_object is
 		port (
 			clk : in std_logic;
 			rst : in std_logic;
-			select_speed : in std_logic_vector (1 downto 0);
-			tank_move : out std_logic
-		);	
-	end component tank_speed;
+			pulse : out std_logic
+    	);
+	end component move_object;
 	
 	-- VGA component
 	component VGA_top_level is
@@ -228,20 +230,18 @@ begin
 			speed2 => t_speed2
 		);
 		
-	move_tank1 : tank_speed
+	move_tank1 : move_object
 		port map (
 			clk => t_clk,
 			rst => t_rst,
-			select_speed => t_speed1,
-			tank_move => t_tank1move
+			pulse => t_tank1move
 		);
 		
-	move_tank2 : tank_speed
+	move_tank2 : move_object
 		port map (
 			clk => t_clk,
-         rst => t_rst,
-         select_speed => t_speed2,
-         tank_move => t_tank2move
+			rst => t_rst,
+			pulse => t_tank2move
 		);
 
 	tank1 : tank 
@@ -249,7 +249,8 @@ begin
 			clk => t_clk,
 			rst => t_rst,
 			tank_in_y => std_logic_vector(to_unsigned(450, 10)),
-			tank_move => t_tank1move,
+			pulse => t_tank1move,
+			speed => t_speed1,
 			tank_out_y => t_tank1y,
 			tank_out_x => t_tank1x	
 		);
@@ -258,23 +259,24 @@ begin
 		port map (
 			clk => t_clk,
 			rst => t_rst,
-			tank_in_y => std_logic_vector(to_unsigned(30, 10)),
-			tank_move => t_tank2move,
+			tank_in_y => std_logic_vector(to_unsigned(450, 10)),
+			pulse => t_tank2move,
+			speed => t_speed2,
 			tank_out_y => t_tank2y,
 			tank_out_x => t_tank2x	
 		);
 		
-	move_bullet : tank_speed
+	move_bullet : move_object
 		port map (
 			clk => t_clk,
-         rst => t_rst,
-         select_speed => "01",
-         tank_move => t_bulletmove
+			rst => t_rst,
+			pulse => t_bulletmove
 		);
 	
 	bullet1 : bullet
 		port map (
-			bullet_move => t_bulletmove,
+			clk => t_clk,
+			pulse => t_bulletmove,
 			rst => t_rst,
 			shoot => shoot_bullet1,
 			curr_tank_x => t_tank1x,
@@ -288,7 +290,8 @@ begin
 	
 	bullet2 : bullet
 		port map (
-			bullet_move => t_bulletmove,
+			clk => t_clk,
+			pulse => t_bulletmove,
 			rst => t_rst,
 			shoot => shoot_bullet2,
 			curr_tank_x => t_tank2x,
@@ -299,7 +302,7 @@ begin
 			bullet_y => t_bullet2y,
 			hit => t_hit2
 		);
-		
+
 	tank1score : score
 		port map (
 			rst => t_rst,

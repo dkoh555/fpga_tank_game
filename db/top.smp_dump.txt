@@ -46,3 +46,33 @@ state.RESET2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 state.RESET3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.DISPLAY_OFF 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.DISPLAY_CLEAR 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|bullet:bullet2|curr_state
+Name curr_state.s_d curr_state.s_c curr_state.s_b curr_state.s_a 
+curr_state.s_a 0 0 0 0 
+curr_state.s_b 0 0 1 1 
+curr_state.s_c 0 1 0 1 
+curr_state.s_d 1 0 0 1 
+
+State Machine - |top|bullet:bullet1|curr_state
+Name curr_state.s_d curr_state.s_c curr_state.s_b curr_state.s_a 
+curr_state.s_a 0 0 0 0 
+curr_state.s_b 0 0 1 1 
+curr_state.s_c 0 1 0 1 
+curr_state.s_d 1 0 0 1 
+
+State Machine - |top|tank:tank2|curr_state
+Name curr_state.move_right curr_state.move_left curr_state.update curr_state.idle curr_state.reset 
+curr_state.reset 0 0 0 0 0 
+curr_state.idle 0 0 0 1 1 
+curr_state.update 0 0 1 0 1 
+curr_state.move_left 0 1 0 0 1 
+curr_state.move_right 1 0 0 0 1 
+
+State Machine - |top|tank:tank1|curr_state
+Name curr_state.move_right curr_state.move_left curr_state.update curr_state.idle curr_state.reset 
+curr_state.reset 0 0 0 0 0 
+curr_state.idle 0 0 0 1 1 
+curr_state.update 0 0 1 0 1 
+curr_state.move_left 0 1 0 0 1 
+curr_state.move_right 1 0 0 0 1 

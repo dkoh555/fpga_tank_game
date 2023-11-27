@@ -44,7 +44,8 @@ begin
 
     -- Combinational process of FSM; contains the different states and their instructions
     process(curr_state, pulse, direction, speed) begin
-
+        internal_tank_x <= internal_tank_x;
+        new_direction <= new_direction; 
         -- Case statement to decide what happens to the tank
         case curr_state is
             -- When reset, shift the positions of the tank back to the center of the screen
@@ -56,8 +57,8 @@ begin
 
             -- When idle, simply wait for the pulse
             when idle =>
-                internal_tank_x <= internal_tank_x;
-                new_direction <= new_direction;
+                -- internal_tank_x <= internal_tank_x;
+                -- new_direction <= new_direction; 
                 -- When pulse is received, make the next state update
                 if (pulse = '1') then
                     next_state <= update;
@@ -67,8 +68,8 @@ begin
 
             -- When update, check the current conditions of the tank and adjust its state accordingly
             when update =>
-                internal_tank_x <= internal_tank_x;
-                new_direction <= new_direction;
+                -- internal_tank_x <= internal_tank_x;
+                -- new_direction <= new_direction;
                 -- If tank moves to right and does exceed screen
                 -- OR if tank moves to left and does not exceed screen, change state to move_left
                 if ((to_integer(unsigned(internal_tank_x)) + TANK_WIDTH / 2 + 1 >= SCREEN_WIDTH and new_direction = '0')
