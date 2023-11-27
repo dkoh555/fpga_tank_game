@@ -9,136 +9,179 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/nickm/OneDrive/CE355/Lab 4/simulation
-Etank
-Z0 w1700495270
-Z1 DPx4 work 10 tank_const 0 22 Gb`Od[Le]i4j?lU:6@@5V3
-Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 66
-Z5 dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks
-Z6 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd
-Z7 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd
+Emove_object
+Z0 w1701119524
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 109
+Z4 dC:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks
+Z5 8C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/move_object/move_object.vhd
+Z6 FC:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/move_object/move_object.vhd
 l0
-L8 1
-VzX_Z;70CkKg@W44V_=zZb1
-!s100 7WT8@KjJmlXUFnk8d:hg53
-Z8 OV;C;2020.1;71
+L5 1
+V27UndOzNJP_SQ_2I2E0j]1
+!s100 F?CNIY4^zIWXDRd@4dc[I1
+Z7 OV;C;2020.1;71
 32
-Z9 !s110 1700495283
+Z8 !s110 1701119529
 !i10b 1
-Z10 !s108 1700495283.000000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd|
-Z12 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd|
+Z9 !s108 1701119529.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/move_object/move_object.vhd|
+!s107 C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/move_object/move_object.vhd|
 !i113 1
-Z13 o-work work -2002 -explicit
-Z14 tExplicit 1 CvgOpt 0
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
 Abehavioral
 R1
 R2
 R3
-R4
-DEx4 work 4 tank 0 22 zX_Z;70CkKg@W44V_=zZb1
-!i122 66
-l27
-L20 41
-VDiEb:zCISSEmWLD<eIaig3
-!s100 0UM;KB3S0UgKjb^kQcHL42
-R8
+DEx4 work 11 move_object 0 22 27UndOzNJP_SQ_2I2E0j]1
+!i122 109
+l20
+L15 24
+Vno7FFPl?HF7G7z`EZFl7C3
+!s100 S=l6D:`V<6<f:fU`?YKmV1
+R7
 32
-R9
+R8
 !i10b 1
+R9
 R10
+Z13 !s107 C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/move_object/move_object.vhd|
+!i113 1
 R11
 R12
-!i113 1
-R13
-R14
-Ptank_const
+Etank
+Z14 w1701117077
+Z15 DPx4 work 10 tank_const 0 22 Gb`Od[Le]i4j?lU:6@@5V3
+R1
+R2
 R3
+!i122 107
 R4
-!i122 65
-Z15 w1700494332
-R5
-Z16 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
-Z17 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
+Z16 8C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks.vhd
+Z17 FC:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks.vhd
+l0
+L8 1
+VI[^j4UbJkG<n0?`j@YZzg1
+!s100 WjC>AGJnZ7:QCV]1a21X;1
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks.vhd|
+Z19 !s107 C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R15
+R1
+R2
+R3
+DEx4 work 4 tank 0 22 I[^j4UbJkG<n0?`j@YZzg1
+!i122 107
+l37
+L21 88
+VUYf0=7ZYQ?Kd=i:KYGYZB1
+!s100 PSmL`XEzFLJRCW@iUFR>@0
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R11
+R12
+Ptank_const
+R2
+R3
+!i122 106
+Z20 w1700947948
+R4
+Z21 8C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tank_const.vhd
+Z22 FC:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tank_const.vhd
 l0
 L5 1
 VGb`Od[Le]i4j?lU:6@@5V3
 !s100 mCiejzHBEg4?D99M>SR543
-R8
+R7
 32
-R9
+R8
 !i10b 1
-R10
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd|
-Z19 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd|
+R9
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tank_const.vhd|
+Z24 !s107 C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tank_const.vhd|
 !i113 1
-R13
-R14
+R11
+R12
 Bbody
-R1
+R15
+R2
 R3
-R4
-!i122 65
+!i122 106
 l0
 L13 1
 V[_aYmjnQc:T0dnJbnzgBP2
 !s100 IIzo8h<[zeN>3IEEUhXN43
-R8
+R7
 32
-R9
+R8
 !i10b 1
-R10
-R18
-R19
+R9
+R23
+R24
 !i113 1
-R13
-R14
+R11
+R12
 Etanks_tb
-Z20 w1700494992
+Z25 w1701118022
+R15
+Z26 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R1
-Z21 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
+!i122 108
 R4
-!i122 67
-R5
-Z22 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
-Z23 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
+Z27 8C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks_test.vhd
+Z28 FC:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks_test.vhd
 l0
 L8 1
 VIIQi=6HSODj8e05aO4[LP1
 !s100 o<O6FTTaJ5cc8;NBRB]Vg1
-R8
+R7
 32
-R9
+R8
 !i10b 1
-R10
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd|
-Z25 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd|
+R9
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks_test.vhd|
+Z30 !s107 C:/Users/kohda/OneDrive/NU Classes/Y3/Q1/comp_eng_355/final_project/fpga_tank_game/tanks/tanks_test.vhd|
 !i113 1
-R13
-R14
+R11
+R12
 Abehavioural
+R15
+R26
 R1
-R21
 R2
 R3
-R4
-Z26 DEx4 work 8 tanks_tb 0 22 IIQi=6HSODj8e05aO4[LP1
-!i122 67
-l44
-Z27 L12 126
-Z28 VYlj<S:E=@YS2gWXdWo3hS2
-Z29 !s100 @2WDkiaLiQ5HcZLSSZLHB3
-R8
+DEx4 work 8 tanks_tb 0 22 IIQi=6HSODj8e05aO4[LP1
+!i122 108
+l55
+L12 144
+VcTGI7J^M4C7inWQ77QUB;3
+!s100 ;C_35Iaz[Un]d^85TB6dc1
+R7
 32
-R9
+R8
 !i10b 1
-R10
-R24
-R25
+R9
+R29
+R30
 !i113 1
-R13
-R14
+R11
+R12

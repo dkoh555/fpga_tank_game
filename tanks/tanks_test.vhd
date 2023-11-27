@@ -14,22 +14,33 @@ architecture behavioural of tanks_tb is
 	--Tank component
     component tank is
         port (
-            -- Inputs
-            clk : in std_logic;
-            rst : in std_logic;
-            tank_in_y : in std_logic_vector (9 downto 0);
-            tank_move : in std_logic;
-			-- Outputs
-            tank_out_y : out std_logic_vector (9 downto 0);
-            tank_out_x : out std_logic_vector (9 downto 0)
+			clk : in std_logic;
+			rst : in std_logic;
+			tank_in_y : in std_logic_vector (9 downto 0);
+			pulse : in std_logic;
+			speed : in std_logic_vector (1 downto 0);
+			tank_out_y : out std_logic_vector (9 downto 0);
+			tank_out_x : out std_logic_vector (9 downto 0)
         );
     end component tank;
+
+	--move_object component
+	component move_object is
+
+		port (
+			clk : in std_logic;
+			rst : in std_logic;
+			pulse : out std_logic
+		);
+
+	end component move_object;
 
 	--Declaring signals
     signal clk_TB : std_logic := '0';
     signal rst_TB : std_logic := '0';
     signal tank_in_y_TB : std_logic_vector (9 downto 0);
-    signal tank_move_TB : std_logic := '0';
+    signal pulse_TB : std_logic;
+	signal speed_TB : std_logic_vector (1 downto 0) := "01";
     signal tank_out_y_TB : std_logic_vector (9 downto 0);
     signal tank_out_x_TB : std_logic_vector (9 downto 0);
 
@@ -43,21 +54,31 @@ architecture behavioural of tanks_tb is
 
 begin
 
-    dut: tank
+    dut1: tank
         port map (
             -- Inputs
             clk => clk_TB,
             rst => rst_TB,
             tank_in_y => tank_in_y_TB,
-            tank_move => tank_move_TB,
+            pulse => pulse_TB,
+			speed => speed_TB,
 			-- Outputs
             tank_out_y => tank_out_y_TB,
             tank_out_x => tank_out_x_TB
         );
+
+	dut2: move_object
+        port map (
+            -- Inputs
+            clk => clk_TB,
+            rst => rst_TB,
+			-- Outputs
+            pulse => pulse_TB
+        );
 					
 	process begin
 		clk_TB <= not clk_TB;
-		wait for 1 ps;	
+		wait for 1 ps;
 	end process;
 
 				
@@ -99,10 +120,7 @@ begin
 			
 			-- Move tank
 			for i in 0 to term_two loop
-				tank_move_TB <= not tank_move_TB;
 				wait for 0.1 ps;
-				tank_move_TB <= not tank_move_TB;
-				wait for 4.9 ps;
 			end loop;
 
 			--With the calculator result, prepare output for outfile
@@ -135,5 +153,4 @@ begin
 	end process;
 	
 end architecture behavioural;
-			
-		
+
