@@ -1,0 +1,653 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -11.622
+TNS   : -283.722
+
+Type  : Slow 1200mV 85C Model Setup 'tank_speed:move_bullet|internal_tank_move'
+Slack : -9.336
+TNS   : -385.071
+
+Type  : Slow 1200mV 85C Model Setup 'tank_speed:move_tank1|internal_tank_move'
+Slack : -6.626
+TNS   : -62.476
+
+Type  : Slow 1200mV 85C Model Setup 'tank_speed:move_tank2|internal_tank_move'
+Slack : -6.603
+TNS   : -61.854
+
+Type  : Slow 1200mV 85C Model Setup 'bullet:bullet1|internal_hit'
+Slack : -4.861
+TNS   : -45.024
+
+Type  : Slow 1200mV 85C Model Setup 'bullet:bullet2|internal_hit'
+Slack : -3.730
+TNS   : -35.348
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -2.760
+TNS   : -55.746
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : -2.713
+TNS   : -86.376
+
+Type  : Slow 1200mV 85C Model Setup 'rst'
+Slack : -2.505
+TNS   : -40.259
+
+Type  : Slow 1200mV 85C Model Setup 'de2lcd:lcd|CLK_400HZ'
+Slack : -1.611
+TNS   : -37.241
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : -0.176
+TNS   : -0.399
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -0.956
+TNS   : -3.737
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.361
+TNS   : -0.745
+
+Type  : Slow 1200mV 85C Model Hold 'de2lcd:lcd|CLK_400HZ'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'tank_speed:move_tank1|internal_tank_move'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'tank_speed:move_tank2|internal_tank_move'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'bullet:bullet1|internal_hit'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'bullet:bullet2|internal_hit'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'tank_speed:move_bullet|internal_tank_move'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rst'
+Slack : 0.905
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'tank_speed:move_bullet|internal_tank_move'
+Slack : -5.052
+TNS   : -216.378
+
+Type  : Slow 1200mV 85C Model Recovery 'shoot_bullet1'
+Slack : -4.568
+TNS   : -4.568
+
+Type  : Slow 1200mV 85C Model Recovery 'shoot_bullet2'
+Slack : -4.169
+TNS   : -4.169
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -2.297
+TNS   : -4.338
+
+Type  : Slow 1200mV 85C Model Recovery 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : -1.930
+TNS   : -1.930
+
+Type  : Slow 1200mV 85C Model Recovery 'bullet:bullet2|internal_hit'
+Slack : -1.714
+TNS   : -3.428
+
+Type  : Slow 1200mV 85C Model Recovery 'tank_speed:move_tank2|internal_tank_move'
+Slack : -1.712
+TNS   : -18.832
+
+Type  : Slow 1200mV 85C Model Recovery 'tank_speed:move_tank1|internal_tank_move'
+Slack : -1.661
+TNS   : -18.271
+
+Type  : Slow 1200mV 85C Model Recovery 'bullet:bullet1|internal_hit'
+Slack : -1.602
+TNS   : -3.204
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : -0.826
+TNS   : -44.401
+
+Type  : Slow 1200mV 85C Model Removal 'shoot_bullet2'
+Slack : 1.102
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'tank_speed:move_bullet|internal_tank_move'
+Slack : 1.253
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'shoot_bullet1'
+Slack : 1.258
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'bullet:bullet1|internal_hit'
+Slack : 1.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'bullet:bullet2|internal_hit'
+Slack : 1.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'tank_speed:move_tank2|internal_tank_move'
+Slack : 1.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'tank_speed:move_tank1|internal_tank_move'
+Slack : 1.457
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : 2.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -158.485
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'shoot_bullet1'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'shoot_bullet2'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : -2.693
+TNS   : -60.518
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'de2lcd:lcd|CLK_400HZ'
+Slack : -1.285
+TNS   : -62.965
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tank_speed:move_bullet|internal_tank_move'
+Slack : -1.285
+TNS   : -59.110
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -1.285
+TNS   : -29.555
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tank_speed:move_tank1|internal_tank_move'
+Slack : -1.285
+TNS   : -14.135
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tank_speed:move_tank2|internal_tank_move'
+Slack : -1.285
+TNS   : -14.135
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : -1.285
+TNS   : -10.280
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'bullet:bullet1|internal_hit'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'bullet:bullet2|internal_hit'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -10.453
+TNS   : -250.438
+
+Type  : Slow 1200mV 0C Model Setup 'tank_speed:move_bullet|internal_tank_move'
+Slack : -8.464
+TNS   : -347.956
+
+Type  : Slow 1200mV 0C Model Setup 'tank_speed:move_tank2|internal_tank_move'
+Slack : -5.870
+TNS   : -55.038
+
+Type  : Slow 1200mV 0C Model Setup 'tank_speed:move_tank1|internal_tank_move'
+Slack : -5.841
+TNS   : -55.127
+
+Type  : Slow 1200mV 0C Model Setup 'bullet:bullet1|internal_hit'
+Slack : -4.453
+TNS   : -41.651
+
+Type  : Slow 1200mV 0C Model Setup 'bullet:bullet2|internal_hit'
+Slack : -3.329
+TNS   : -32.139
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -2.430
+TNS   : -49.650
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : -2.377
+TNS   : -74.621
+
+Type  : Slow 1200mV 0C Model Setup 'rst'
+Slack : -2.252
+TNS   : -36.120
+
+Type  : Slow 1200mV 0C Model Setup 'de2lcd:lcd|CLK_400HZ'
+Slack : -1.370
+TNS   : -29.125
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : -0.063
+TNS   : -0.124
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -0.774
+TNS   : -2.890
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.267
+TNS   : -0.445
+
+Type  : Slow 1200mV 0C Model Hold 'de2lcd:lcd|CLK_400HZ'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'tank_speed:move_tank1|internal_tank_move'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'tank_speed:move_tank2|internal_tank_move'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'bullet:bullet1|internal_hit'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'bullet:bullet2|internal_hit'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'tank_speed:move_bullet|internal_tank_move'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rst'
+Slack : 0.811
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'tank_speed:move_bullet|internal_tank_move'
+Slack : -4.656
+TNS   : -196.700
+
+Type  : Slow 1200mV 0C Model Recovery 'shoot_bullet1'
+Slack : -4.162
+TNS   : -4.162
+
+Type  : Slow 1200mV 0C Model Recovery 'shoot_bullet2'
+Slack : -3.793
+TNS   : -3.793
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -1.986
+TNS   : -3.761
+
+Type  : Slow 1200mV 0C Model Recovery 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : -1.618
+TNS   : -1.618
+
+Type  : Slow 1200mV 0C Model Recovery 'tank_speed:move_tank2|internal_tank_move'
+Slack : -1.502
+TNS   : -16.522
+
+Type  : Slow 1200mV 0C Model Recovery 'tank_speed:move_tank1|internal_tank_move'
+Slack : -1.457
+TNS   : -16.027
+
+Type  : Slow 1200mV 0C Model Recovery 'bullet:bullet2|internal_hit'
+Slack : -1.407
+TNS   : -2.814
+
+Type  : Slow 1200mV 0C Model Recovery 'bullet:bullet1|internal_hit'
+Slack : -1.306
+TNS   : -2.612
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : -0.691
+TNS   : -28.935
+
+Type  : Slow 1200mV 0C Model Removal 'shoot_bullet2'
+Slack : 0.982
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'shoot_bullet1'
+Slack : 1.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'tank_speed:move_bullet|internal_tank_move'
+Slack : 1.178
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'bullet:bullet1|internal_hit'
+Slack : 1.238
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'bullet:bullet2|internal_hit'
+Slack : 1.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'tank_speed:move_tank2|internal_tank_move'
+Slack : 1.468
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'tank_speed:move_tank1|internal_tank_move'
+Slack : 1.482
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : 2.126
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -158.485
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'shoot_bullet1'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'shoot_bullet2'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : -2.649
+TNS   : -60.474
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'de2lcd:lcd|CLK_400HZ'
+Slack : -1.285
+TNS   : -62.965
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tank_speed:move_bullet|internal_tank_move'
+Slack : -1.285
+TNS   : -59.110
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -1.285
+TNS   : -29.555
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tank_speed:move_tank1|internal_tank_move'
+Slack : -1.285
+TNS   : -14.135
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tank_speed:move_tank2|internal_tank_move'
+Slack : -1.285
+TNS   : -14.135
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : -1.285
+TNS   : -10.280
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'bullet:bullet1|internal_hit'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'bullet:bullet2|internal_hit'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -5.281
+TNS   : -76.482
+
+Type  : Fast 1200mV 0C Model Setup 'tank_speed:move_bullet|internal_tank_move'
+Slack : -4.225
+TNS   : -173.218
+
+Type  : Fast 1200mV 0C Model Setup 'tank_speed:move_tank1|internal_tank_move'
+Slack : -2.744
+TNS   : -25.242
+
+Type  : Fast 1200mV 0C Model Setup 'tank_speed:move_tank2|internal_tank_move'
+Slack : -2.671
+TNS   : -24.503
+
+Type  : Fast 1200mV 0C Model Setup 'bullet:bullet1|internal_hit'
+Slack : -2.372
+TNS   : -20.205
+
+Type  : Fast 1200mV 0C Model Setup 'bullet:bullet2|internal_hit'
+Slack : -1.632
+TNS   : -15.197
+
+Type  : Fast 1200mV 0C Model Setup 'rst'
+Slack : -1.218
+TNS   : -15.352
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -0.915
+TNS   : -17.676
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : -0.838
+TNS   : -20.445
+
+Type  : Fast 1200mV 0C Model Setup 'de2lcd:lcd|CLK_400HZ'
+Slack : -0.262
+TNS   : -1.885
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -0.650
+TNS   : -2.809
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.612
+TNS   : -8.463
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'de2lcd:lcd|CLK_400HZ'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'tank_speed:move_tank1|internal_tank_move'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'tank_speed:move_tank2|internal_tank_move'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'bullet:bullet1|internal_hit'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'bullet:bullet2|internal_hit'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rst'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'tank_speed:move_bullet|internal_tank_move'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'tank_speed:move_bullet|internal_tank_move'
+Slack : -2.236
+TNS   : -95.009
+
+Type  : Fast 1200mV 0C Model Recovery 'shoot_bullet1'
+Slack : -1.821
+TNS   : -1.821
+
+Type  : Fast 1200mV 0C Model Recovery 'shoot_bullet2'
+Slack : -1.703
+TNS   : -1.703
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -1.330
+TNS   : -4.667
+
+Type  : Fast 1200mV 0C Model Recovery 'bullet:bullet2|internal_hit'
+Slack : -1.146
+TNS   : -2.292
+
+Type  : Fast 1200mV 0C Model Recovery 'bullet:bullet1|internal_hit'
+Slack : -1.138
+TNS   : -2.276
+
+Type  : Fast 1200mV 0C Model Recovery 'tank_speed:move_tank2|internal_tank_move'
+Slack : -1.055
+TNS   : -11.605
+
+Type  : Fast 1200mV 0C Model Recovery 'tank_speed:move_tank1|internal_tank_move'
+Slack : -1.013
+TNS   : -11.143
+
+Type  : Fast 1200mV 0C Model Recovery 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : -0.605
+TNS   : -0.605
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.753
+TNS   : -55.119
+
+Type  : Fast 1200mV 0C Model Removal 'shoot_bullet2'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'shoot_bullet1'
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'tank_speed:move_tank1|internal_tank_move'
+Slack : 0.555
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'tank_speed:move_tank2|internal_tank_move'
+Slack : 0.584
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'tank_speed:move_bullet|internal_tank_move'
+Slack : 0.602
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'bullet:bullet1|internal_hit'
+Slack : 0.651
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'bullet:bullet2|internal_hit'
+Slack : 0.659
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : 1.313
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -126.852
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'shoot_bullet2'
+Slack : -3.000
+TNS   : -4.254
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'shoot_bullet1'
+Slack : -3.000
+TNS   : -4.240
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.179
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'de2lcd:lcd|CLK_400HZ'
+Slack : -1.000
+TNS   : -49.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : -1.000
+TNS   : -46.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tank_speed:move_bullet|internal_tank_move'
+Slack : -1.000
+TNS   : -46.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -1.000
+TNS   : -23.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tank_speed:move_tank1|internal_tank_move'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tank_speed:move_tank2|internal_tank_move'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|scan_ready'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'bullet:bullet1|internal_hit'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'bullet:bullet2|internal_hit'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:keyboard|keyboard:u1|ready_set'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

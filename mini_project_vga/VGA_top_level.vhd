@@ -1,19 +1,22 @@
 library IEEE;
 
 use IEEE.std_logic_1164.all;
+use WORK.tank_const.all;
 
 entity VGA_top_level is
 	port(
-			CLOCK_50 										: in std_logic;
-			RESET_N											: in std_logic;
-
-			--Implementing additional inputs for receiving tank and bullet positions
-			TANK_A_POSX, TANK_B_POSX, BULL_A_POSX, BULL_B_POSX	: in std_logic_vector(9 downto 0); --Pixel x-coord is from 0 to 640 (2^9 - 1 < 640 < 2^10 - 1)
-			BULL_A_POSY, BULL_B_POSY : in std_logic_vector(9 downto 0); --Pixel y-coord is from 0 to 640 (2^8 - 1 < 480 < 2^9 - 1)
-	
+			-- Clock and Reset signals
+			CLOCK_50 : in std_logic;
+			RESET_N : in std_logic;
+			WINNER : in std_logic_vector(1 downto 0);
+			-- Inputs for tank and bullet positions
+			TANK_A_POSX, TANK_A_POSY : in std_logic_vector(9 downto 0); 
+			TANK_B_POSX, TANK_B_POSY : in std_logic_vector(9 downto 0); 
+			BULL_A_POSX, BULL_A_POSY : in std_logic_vector(9 downto 0); 
+			BULL_B_POSX, BULL_B_POSY : in std_logic_vector(9 downto 0);
 			--VGA 
-			VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(7 downto 0); 
-			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic
+			VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
+			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
 
 
 		);
@@ -23,14 +26,14 @@ architecture structural of VGA_top_level is
 
 component pixelGenerator is
 	port(
-			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
-			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
-
-			--Modified inputs
-			bot_tank_x, top_tank_x, bot_bull_x, top_bull_x	: in std_logic_vector(9 downto 0);
-			bot_bull_y, top_bull_y : in std_logic_vector(9 downto 0);
-
-			red_out, green_out, blue_out					: out std_logic_vector(7 downto 0)
+			winner : in std_logic_vector(1 downto 0);
+			clk, ROM_clk, rst_n, video_on, eof : in std_logic;
+			pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
+			top_tank_x, top_tank_y : in std_logic_vector(9 downto 0); 
+			bot_tank_x, bot_tank_y	: in std_logic_vector(9 downto 0);
+			top_bull_x, top_bull_y : in std_logic_vector(9 downto 0);
+			bot_bull_x, bot_bull_y : in std_logic_vector(9 downto 0);
+			red_out, green_out, blue_out : out std_logic_vector(7 downto 0)
 		);
 end component pixelGenerator;
 
@@ -55,9 +58,26 @@ begin
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator
-		port map(CLOCK_50, VGA_clk_int, RESET_N, video_on_int, eof, pixel_row_int, pixel_column_int,
-			TANK_A_POSX, TANK_B_POSX, BULL_A_POSX, BULL_B_POSX, BULL_A_POSY, BULL_B_POSY,
-			VGA_RED, VGA_GREEN, VGA_BLUE
+		port map(
+			winner => winner,
+			clk => CLOCK_50, 
+			ROM_clk => VGA_clk_int, 
+			rst_n => RESET_N, 
+			video_on => video_on_int, 
+			eof => eof, 
+			pixel_row => pixel_row_int, 
+			pixel_column => pixel_column_int,
+			top_tank_x => TANK_A_POSX, 
+			top_tank_y => TANK_A_POSY,
+			bot_tank_x => TANK_B_POSX,
+			bot_tank_y => TANK_B_POSY,
+			top_bull_x => BULL_A_POSX, 
+			top_bull_y => BULL_A_POSY,
+			bot_bull_x => BULL_B_POSX, 
+			bot_bull_y => BULL_B_POSY,
+			red_out => VGA_RED, 
+			green_out => VGA_GREEN,
+			blue_out => VGA_BLUE
 		);
 
 --------------------------------------------------------------------------------------------

@@ -141,10 +141,10 @@ BEGIN
 						LCD_RW <= '0';
 						if (winner = "00") then
 							DATA_BUS_VALUE <= X"41"; -- A
-						elsif (winner = "01")
-							DATA_BUS_VALUE <= X"31"; -- 1
+						elsif (winner = "01") then
+							DATA_BUS_VALUE <= X"32"; -- 1
 						else
-							DATA_BUS_VALUE <= X"32"; -- 2
+							DATA_BUS_VALUE <= X"31"; -- 2
 						end if;
 						state <= TOGGLE_E;
 						next_command <= WRITE_CHAR3;

@@ -30,7 +30,7 @@ begin
             internal_winner <= (others => '0');
         -- If score increases
         elsif (rising_edge(clk)) then
-            -- Default winnter is 0
+            -- Default winner is 0
             internal_winner <= (others => '0');
             -- Check scores of each player
             if (to_unsigned(WINNING_SCORE, SCORE_WIDTH) = unsigned(score1)) then

@@ -12,7 +12,7 @@ entity display_score is
         -- Inputs
         clk : in std_logic;
         score1 : in std_logic_vector (SCORE_WIDTH - 1 downto 0);
-        score2 : in std_logic (SCORE_WIDTH - 1 downto 0);
+        score2 : in std_logic_vector (SCORE_WIDTH - 1 downto 0);
         -- Outputs
         display1 : out std_logic_vector (7 downto 0);
         display2 : out std_logic_vector (7 downto 0)

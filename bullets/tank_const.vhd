@@ -5,8 +5,9 @@ use IEEE.std_logic_1164.all;
 package tank_const is
 	constant SCREEN_WIDTH : natural := 640;
 	constant SCREEN_HEIGHT : natural := 480;
-	constant TANK_WIDTH : natural := 20;
-	constant TANK_HEIGHT : natural := 10;
+	constant TANK_WIDTH : natural := 80;
+	constant TANK_HEIGHT : natural := 40;
+	constant BULLET_SIZE : natural := 10;
 
 end package tank_const;
 

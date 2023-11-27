@@ -54,11 +54,13 @@ begin
         elsif (rising_edge(bullet_move)) then
             if (internal_hit = '1') then
                 rst_hit <= '1';
+				elsif (rst_hit = '1') then
+					rst_hit <= '0';
             end if;
-        elsif (falling_edge(bullet_move)) then
-            if (rst_hit = '1') then
-                rst_hit <= '0';
-            end if;
+        --elsif (falling_edge(bullet_move)) then
+          --  if (rst_hit = '1') then
+            --    rst_hit <= '0';
+            --end if;
         end if;
 
     end process;
@@ -81,7 +83,11 @@ begin
             -- Set x value of bullet to tank
             curr_bullet_x <= curr_tank_x;
             -- Set y value of bullet to tank
-            curr_bullet_y <= curr_tank_y;
+				if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
+					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
+				else
+					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
+				end if;
             -- Bullet is now valid
             internal_bullet_valid <= '0';
         -- If bullet is called to move and bullet has been shot
@@ -90,7 +96,11 @@ begin
             -- Set x value of bullet to tank
             curr_bullet_x <= curr_tank_x;
             -- Set y value of bullet to tank
-            curr_bullet_y <= curr_tank_y;
+				if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
+					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
+				else
+					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
+				end if;
             -- Bullet is now valid
             internal_bullet_valid <= '1';
         elsif (rising_edge(bullet_move)) then
@@ -101,7 +111,11 @@ begin
                     -- Set x value of bullet to tank
                     curr_bullet_x <= curr_tank_x;
                     -- Set y value of bullet to tank
-                    curr_bullet_y <= curr_tank_y;
+							if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
+								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
+							else
+								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
+							end if;
                     -- Set hit to 1
                     internal_hit <= '1';
                     -- Bullet is no longer valid
@@ -131,7 +145,11 @@ begin
                     -- Set x value of bullet to x value of tank
                     curr_bullet_x <= curr_tank_x;
                     -- Set y value of bullet to y value of tank
-                    curr_bullet_y <= curr_tank_y;
+							if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
+								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
+							else
+								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
+							end if;
                     -- Bullet is no longer valid
                     internal_bullet_valid <= '0';
                 end if; 
