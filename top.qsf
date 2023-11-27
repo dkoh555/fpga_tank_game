@@ -142,7 +142,6 @@ set_global_assignment -name VHDL_FILE display_score/display_score.vhd
 set_global_assignment -name VHDL_FILE bullets/tank_const.vhd
 set_global_assignment -name VHDL_FILE bullets/bullets.vhd
 set_global_assignment -name VHDL_FILE top.vhd
-set_global_assignment -name QIP_FILE faster_clock.qip
 set_location_assignment PIN_H22 -to inter_speed1disp[6]
 set_location_assignment PIN_J22 -to inter_speed1disp[5]
 set_location_assignment PIN_L25 -to inter_speed1disp[4]
@@ -164,4 +163,5 @@ set_location_assignment PIN_AA21 -to disp_winner[3]
 set_location_assignment PIN_AB20 -to disp_winner[2]
 set_location_assignment PIN_U21 -to disp_winner[1]
 set_location_assignment PIN_V21 -to disp_winner[0]
+set_global_assignment -name SDC_FILE sdc_910.sdc
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

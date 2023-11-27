@@ -10,36 +10,34 @@ entity top is
         -- General Inputs
         clk : in std_logic;
         rst : in std_logic;
-		  -- Keyboard Inputs		  
+		-- Keyboard Inputs		  
         kb_clk : in std_logic;
-		  kb_data : in std_logic;
+		kb_data : in std_logic;
+		
+		-- Bullet Inputs
+		shoot_bullet1 : in std_logic;
+		shoot_bullet2 : in std_logic;
+		-- VGA Inputs
+		rst_n : in std_logic;
+		
+		inter_speed1disp, inter_speed2disp : out std_logic_vector (6 downto 0);
+		
+		-- VGA Outputs
+		vga_red, vga_green, vga_blue : out std_logic_vector(7 downto 0); 
+		horiz_sync, vert_sync, vga_blank, vga_clk : out std_logic;
+		
+		-- LCD Outputs
+		lcd_rs, lcd_e, lcd_on, reset_led, sec_led : out std_logic;
+		lcd_rw	: buffer std_logic;
+		data_bus : inout std_logic_vector(7 DOWNTO 0);  
 		  
-		  -- Bullet Inputs
-		  shoot_bullet1 : in std_logic;
-		  shoot_bullet2 : in std_logic;
-		  -- VGA Inputs
-		  rst_n : in std_logic;
-		  
-		  inter_speed1disp, inter_speed2disp : out std_logic_vector (6 downto 0);
-		  
-		  -- VGA Outputs
-		  vga_red, vga_green, vga_blue : out std_logic_vector(7 downto 0); 
-		  horiz_sync, vert_sync, vga_blank, vga_clk : out std_logic;
-		  
-		  -- LCD Outputs
-		  lcd_rs, lcd_e, lcd_on, reset_led, sec_led : out std_logic;
-		  lcd_rw	: buffer std_logic;
-		  data_bus : inout std_logic_vector(7 DOWNTO 0);  
-		  
-		  -- Score Outputs
+		-- Score Outputs
         p1_score : out std_logic_vector (6 downto 0);
         p2_score : out std_logic_vector (6 downto 0)
     );
 end entity top;
 
 architecture structural of top is
-
-
 
     -- Tank component
     component tank is
@@ -174,65 +172,48 @@ architecture structural of top is
 		);
 	end component score_stop;
 	
-	-- PLL
-	component faster_clock IS
-		port (
-			areset : IN STD_LOGIC;
-			inclk0 : IN STD_LOGIC;
-			c0	: OUT STD_LOGIC ;
-			locked : OUT STD_LOGIC 
-		);
-	end component faster_clock;
 	 
-	 -- Unused signals
-	 --signal inter_speed1disp, inter_speed2disp : std_logic_vector (6 downto 0);
-	 signal inter_key : std_logic_vector (13 downto 0);
-	 
-	 -- Clock signal
-	 signal t_clk : std_logic;
-	 
-	 -- Reset signal
-	 signal t_rst : std_logic;
-	 
-	 -- Tank speeds
-	 signal t_speed1, t_speed2 : std_logic_vector (1 downto 0);
-	 
-	 -- Tank move pulse
-	 signal t_tank1move, t_tank2move : std_logic;
-	 
-	 -- Tanks locations
-	 signal t_tank1y, t_tank1x, t_tank2y, t_tank2x : std_logic_vector (9 downto 0);
-	 
-	 -- Bullet move pulse
-	 signal t_bulletmove : std_logic;
-	 
-	 -- Bullet position
-	 signal t_bullet1y, t_bullet1x, t_bullet2y, t_bullet2x : std_logic_vector (9 downto 0);
-	 
-	 -- Tanks hit
-	 signal t_hit1, t_hit2 : std_logic;
-	 
-	 -- Scores
-	 signal t_score1, t_score2 : std_logic_vector (1 downto 0);
-	 
-	 -- Winner
-	 signal t_winner : std_logic_vector (1 downto 0);
-	 
-	 -- New clock
-	 signal n_clk, clk_lock : std_logic;
+	-- Unused signals
+	--signal inter_speed1disp, inter_speed2disp : std_logic_vector (6 downto 0);
+	signal inter_key : std_logic_vector (13 downto 0);
+	
+	-- Clock signal
+	signal t_clk : std_logic;
+	
+	-- Reset signal
+	signal t_rst : std_logic;
+	
+	-- Tank speeds
+	signal t_speed1, t_speed2 : std_logic_vector (1 downto 0);
+	
+	-- Tank move pulse
+	signal t_tank1move, t_tank2move : std_logic;
+	
+	-- Tanks locations
+	signal t_tank1y, t_tank1x, t_tank2y, t_tank2x : std_logic_vector (9 downto 0);
+	
+	-- Bullet move pulse
+	signal t_bulletmove : std_logic;
+	
+	-- Bullet position
+	signal t_bullet1y, t_bullet1x, t_bullet2y, t_bullet2x : std_logic_vector (9 downto 0);
+	
+	-- Tanks hit
+	signal t_hit1, t_hit2 : std_logic;
+	
+	-- Scores
+	signal t_score1, t_score2 : std_logic_vector (1 downto 0);
+	
+	-- Winner
+	signal t_winner : std_logic_vector (1 downto 0);
+	
+	-- New clock
+	signal n_clk, clk_lock : std_logic;
 
 begin
 	
 	
 	t_rst <= not rst;
-	
-	new_clk: faster_clock
-		port map (
-			areset => t_rst,
-			inclk0 => clk,
-			c0	=> n_clk,
-			locked => clk_lock
-		);
 
 	keyboard : ps2 
 		port map ( 
@@ -250,9 +231,9 @@ begin
 	move_tank1 : tank_speed
 		port map (
 			clk => t_clk,
-         rst => t_rst,
-         select_speed => t_speed1,
-         tank_move => t_tank1move
+			rst => t_rst,
+			select_speed => t_speed1,
+			tank_move => t_tank1move
 		);
 		
 	move_tank2 : tank_speed

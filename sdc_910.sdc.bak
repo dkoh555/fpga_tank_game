@@ -1,0 +1,1 @@
+create_clock -name SYSCLK -period 9.10 [get_ports clock]

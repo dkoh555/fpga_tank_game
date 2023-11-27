@@ -1,5 +1,5 @@
 Timing Analyzer report for top
-Mon Nov 27 00:13:04 2023
+Mon Nov 27 11:57:57 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,167 +9,168 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow 1200mV 85C Model Fmax Summary
-  6. Timing Closure Recommendations
-  7. Slow 1200mV 85C Model Setup Summary
-  8. Slow 1200mV 85C Model Hold Summary
-  9. Slow 1200mV 85C Model Recovery Summary
- 10. Slow 1200mV 85C Model Removal Summary
- 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1200mV 85C Model Setup: 'clk'
- 13. Slow 1200mV 85C Model Setup: 'tank_speed:move_bullet|internal_tank_move'
- 14. Slow 1200mV 85C Model Setup: 'tank_speed:move_tank1|internal_tank_move'
- 15. Slow 1200mV 85C Model Setup: 'tank_speed:move_tank2|internal_tank_move'
- 16. Slow 1200mV 85C Model Setup: 'bullet:bullet1|internal_hit'
- 17. Slow 1200mV 85C Model Setup: 'bullet:bullet2|internal_hit'
- 18. Slow 1200mV 85C Model Setup: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
- 19. Slow 1200mV 85C Model Setup: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
- 20. Slow 1200mV 85C Model Setup: 'rst'
- 21. Slow 1200mV 85C Model Setup: 'de2lcd:lcd|CLK_400HZ'
- 22. Slow 1200mV 85C Model Setup: 'ps2:keyboard|keyboard:u1|scan_ready'
- 23. Slow 1200mV 85C Model Hold: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
- 24. Slow 1200mV 85C Model Hold: 'clk'
- 25. Slow 1200mV 85C Model Hold: 'de2lcd:lcd|CLK_400HZ'
- 26. Slow 1200mV 85C Model Hold: 'tank_speed:move_tank1|internal_tank_move'
- 27. Slow 1200mV 85C Model Hold: 'tank_speed:move_tank2|internal_tank_move'
- 28. Slow 1200mV 85C Model Hold: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
- 29. Slow 1200mV 85C Model Hold: 'ps2:keyboard|keyboard:u1|scan_ready'
- 30. Slow 1200mV 85C Model Hold: 'bullet:bullet1|internal_hit'
- 31. Slow 1200mV 85C Model Hold: 'bullet:bullet2|internal_hit'
- 32. Slow 1200mV 85C Model Hold: 'tank_speed:move_bullet|internal_tank_move'
- 33. Slow 1200mV 85C Model Hold: 'rst'
- 34. Slow 1200mV 85C Model Recovery: 'tank_speed:move_bullet|internal_tank_move'
- 35. Slow 1200mV 85C Model Recovery: 'shoot_bullet1'
- 36. Slow 1200mV 85C Model Recovery: 'shoot_bullet2'
- 37. Slow 1200mV 85C Model Recovery: 'clk'
- 38. Slow 1200mV 85C Model Recovery: 'ps2:keyboard|keyboard:u1|ready_set'
- 39. Slow 1200mV 85C Model Recovery: 'bullet:bullet2|internal_hit'
- 40. Slow 1200mV 85C Model Recovery: 'tank_speed:move_tank2|internal_tank_move'
- 41. Slow 1200mV 85C Model Recovery: 'tank_speed:move_tank1|internal_tank_move'
- 42. Slow 1200mV 85C Model Recovery: 'bullet:bullet1|internal_hit'
- 43. Slow 1200mV 85C Model Removal: 'clk'
- 44. Slow 1200mV 85C Model Removal: 'shoot_bullet2'
- 45. Slow 1200mV 85C Model Removal: 'tank_speed:move_bullet|internal_tank_move'
- 46. Slow 1200mV 85C Model Removal: 'shoot_bullet1'
- 47. Slow 1200mV 85C Model Removal: 'bullet:bullet1|internal_hit'
- 48. Slow 1200mV 85C Model Removal: 'bullet:bullet2|internal_hit'
- 49. Slow 1200mV 85C Model Removal: 'tank_speed:move_tank2|internal_tank_move'
- 50. Slow 1200mV 85C Model Removal: 'tank_speed:move_tank1|internal_tank_move'
- 51. Slow 1200mV 85C Model Removal: 'ps2:keyboard|keyboard:u1|ready_set'
- 52. Slow 1200mV 85C Model Metastability Summary
- 53. Slow 1200mV 0C Model Fmax Summary
- 54. Slow 1200mV 0C Model Setup Summary
- 55. Slow 1200mV 0C Model Hold Summary
- 56. Slow 1200mV 0C Model Recovery Summary
- 57. Slow 1200mV 0C Model Removal Summary
- 58. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 59. Slow 1200mV 0C Model Setup: 'clk'
- 60. Slow 1200mV 0C Model Setup: 'tank_speed:move_bullet|internal_tank_move'
- 61. Slow 1200mV 0C Model Setup: 'tank_speed:move_tank2|internal_tank_move'
- 62. Slow 1200mV 0C Model Setup: 'tank_speed:move_tank1|internal_tank_move'
- 63. Slow 1200mV 0C Model Setup: 'bullet:bullet1|internal_hit'
- 64. Slow 1200mV 0C Model Setup: 'bullet:bullet2|internal_hit'
- 65. Slow 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
- 66. Slow 1200mV 0C Model Setup: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
- 67. Slow 1200mV 0C Model Setup: 'rst'
- 68. Slow 1200mV 0C Model Setup: 'de2lcd:lcd|CLK_400HZ'
- 69. Slow 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|scan_ready'
- 70. Slow 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
- 71. Slow 1200mV 0C Model Hold: 'clk'
- 72. Slow 1200mV 0C Model Hold: 'de2lcd:lcd|CLK_400HZ'
- 73. Slow 1200mV 0C Model Hold: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
- 74. Slow 1200mV 0C Model Hold: 'tank_speed:move_tank1|internal_tank_move'
- 75. Slow 1200mV 0C Model Hold: 'tank_speed:move_tank2|internal_tank_move'
- 76. Slow 1200mV 0C Model Hold: 'bullet:bullet1|internal_hit'
- 77. Slow 1200mV 0C Model Hold: 'bullet:bullet2|internal_hit'
- 78. Slow 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|scan_ready'
- 79. Slow 1200mV 0C Model Hold: 'tank_speed:move_bullet|internal_tank_move'
- 80. Slow 1200mV 0C Model Hold: 'rst'
- 81. Slow 1200mV 0C Model Recovery: 'tank_speed:move_bullet|internal_tank_move'
- 82. Slow 1200mV 0C Model Recovery: 'shoot_bullet1'
- 83. Slow 1200mV 0C Model Recovery: 'shoot_bullet2'
- 84. Slow 1200mV 0C Model Recovery: 'clk'
- 85. Slow 1200mV 0C Model Recovery: 'ps2:keyboard|keyboard:u1|ready_set'
- 86. Slow 1200mV 0C Model Recovery: 'tank_speed:move_tank2|internal_tank_move'
- 87. Slow 1200mV 0C Model Recovery: 'tank_speed:move_tank1|internal_tank_move'
- 88. Slow 1200mV 0C Model Recovery: 'bullet:bullet2|internal_hit'
- 89. Slow 1200mV 0C Model Recovery: 'bullet:bullet1|internal_hit'
- 90. Slow 1200mV 0C Model Removal: 'clk'
- 91. Slow 1200mV 0C Model Removal: 'shoot_bullet2'
- 92. Slow 1200mV 0C Model Removal: 'shoot_bullet1'
- 93. Slow 1200mV 0C Model Removal: 'tank_speed:move_bullet|internal_tank_move'
- 94. Slow 1200mV 0C Model Removal: 'bullet:bullet1|internal_hit'
- 95. Slow 1200mV 0C Model Removal: 'bullet:bullet2|internal_hit'
- 96. Slow 1200mV 0C Model Removal: 'tank_speed:move_tank2|internal_tank_move'
- 97. Slow 1200mV 0C Model Removal: 'tank_speed:move_tank1|internal_tank_move'
- 98. Slow 1200mV 0C Model Removal: 'ps2:keyboard|keyboard:u1|ready_set'
- 99. Slow 1200mV 0C Model Metastability Summary
-100. Fast 1200mV 0C Model Setup Summary
-101. Fast 1200mV 0C Model Hold Summary
-102. Fast 1200mV 0C Model Recovery Summary
-103. Fast 1200mV 0C Model Removal Summary
-104. Fast 1200mV 0C Model Minimum Pulse Width Summary
-105. Fast 1200mV 0C Model Setup: 'clk'
-106. Fast 1200mV 0C Model Setup: 'tank_speed:move_bullet|internal_tank_move'
-107. Fast 1200mV 0C Model Setup: 'tank_speed:move_tank1|internal_tank_move'
-108. Fast 1200mV 0C Model Setup: 'tank_speed:move_tank2|internal_tank_move'
-109. Fast 1200mV 0C Model Setup: 'bullet:bullet1|internal_hit'
-110. Fast 1200mV 0C Model Setup: 'bullet:bullet2|internal_hit'
-111. Fast 1200mV 0C Model Setup: 'rst'
-112. Fast 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
-113. Fast 1200mV 0C Model Setup: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
-114. Fast 1200mV 0C Model Setup: 'de2lcd:lcd|CLK_400HZ'
-115. Fast 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|scan_ready'
-116. Fast 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
-117. Fast 1200mV 0C Model Hold: 'clk'
-118. Fast 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|scan_ready'
-119. Fast 1200mV 0C Model Hold: 'de2lcd:lcd|CLK_400HZ'
-120. Fast 1200mV 0C Model Hold: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
-121. Fast 1200mV 0C Model Hold: 'tank_speed:move_tank1|internal_tank_move'
-122. Fast 1200mV 0C Model Hold: 'tank_speed:move_tank2|internal_tank_move'
-123. Fast 1200mV 0C Model Hold: 'bullet:bullet1|internal_hit'
-124. Fast 1200mV 0C Model Hold: 'bullet:bullet2|internal_hit'
-125. Fast 1200mV 0C Model Hold: 'rst'
-126. Fast 1200mV 0C Model Hold: 'tank_speed:move_bullet|internal_tank_move'
-127. Fast 1200mV 0C Model Recovery: 'tank_speed:move_bullet|internal_tank_move'
-128. Fast 1200mV 0C Model Recovery: 'shoot_bullet1'
-129. Fast 1200mV 0C Model Recovery: 'shoot_bullet2'
-130. Fast 1200mV 0C Model Recovery: 'clk'
-131. Fast 1200mV 0C Model Recovery: 'bullet:bullet2|internal_hit'
-132. Fast 1200mV 0C Model Recovery: 'bullet:bullet1|internal_hit'
-133. Fast 1200mV 0C Model Recovery: 'tank_speed:move_tank2|internal_tank_move'
-134. Fast 1200mV 0C Model Recovery: 'tank_speed:move_tank1|internal_tank_move'
-135. Fast 1200mV 0C Model Recovery: 'ps2:keyboard|keyboard:u1|ready_set'
-136. Fast 1200mV 0C Model Removal: 'clk'
-137. Fast 1200mV 0C Model Removal: 'shoot_bullet2'
-138. Fast 1200mV 0C Model Removal: 'shoot_bullet1'
-139. Fast 1200mV 0C Model Removal: 'tank_speed:move_tank1|internal_tank_move'
-140. Fast 1200mV 0C Model Removal: 'tank_speed:move_tank2|internal_tank_move'
-141. Fast 1200mV 0C Model Removal: 'tank_speed:move_bullet|internal_tank_move'
-142. Fast 1200mV 0C Model Removal: 'bullet:bullet1|internal_hit'
-143. Fast 1200mV 0C Model Removal: 'bullet:bullet2|internal_hit'
-144. Fast 1200mV 0C Model Removal: 'ps2:keyboard|keyboard:u1|ready_set'
-145. Fast 1200mV 0C Model Metastability Summary
-146. Multicorner Timing Analysis Summary
-147. Board Trace Model Assignments
-148. Input Transition Times
-149. Signal Integrity Metrics (Slow 1200mv 0c Model)
-150. Signal Integrity Metrics (Slow 1200mv 85c Model)
-151. Signal Integrity Metrics (Fast 1200mv 0c Model)
-152. Setup Transfers
-153. Hold Transfers
-154. Recovery Transfers
-155. Removal Transfers
-156. Report TCCS
-157. Report RSKM
-158. Unconstrained Paths Summary
-159. Clock Status Summary
-160. Unconstrained Input Ports
-161. Unconstrained Output Ports
-162. Unconstrained Input Ports
-163. Unconstrained Output Ports
-164. Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'clk'
+ 14. Slow 1200mV 85C Model Setup: 'tank_speed:move_bullet|internal_tank_move'
+ 15. Slow 1200mV 85C Model Setup: 'tank_speed:move_tank1|internal_tank_move'
+ 16. Slow 1200mV 85C Model Setup: 'tank_speed:move_tank2|internal_tank_move'
+ 17. Slow 1200mV 85C Model Setup: 'bullet:bullet1|internal_hit'
+ 18. Slow 1200mV 85C Model Setup: 'bullet:bullet2|internal_hit'
+ 19. Slow 1200mV 85C Model Setup: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+ 20. Slow 1200mV 85C Model Setup: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+ 21. Slow 1200mV 85C Model Setup: 'rst'
+ 22. Slow 1200mV 85C Model Setup: 'de2lcd:lcd|CLK_400HZ'
+ 23. Slow 1200mV 85C Model Setup: 'ps2:keyboard|keyboard:u1|scan_ready'
+ 24. Slow 1200mV 85C Model Hold: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+ 25. Slow 1200mV 85C Model Hold: 'clk'
+ 26. Slow 1200mV 85C Model Hold: 'de2lcd:lcd|CLK_400HZ'
+ 27. Slow 1200mV 85C Model Hold: 'tank_speed:move_tank1|internal_tank_move'
+ 28. Slow 1200mV 85C Model Hold: 'tank_speed:move_tank2|internal_tank_move'
+ 29. Slow 1200mV 85C Model Hold: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+ 30. Slow 1200mV 85C Model Hold: 'ps2:keyboard|keyboard:u1|scan_ready'
+ 31. Slow 1200mV 85C Model Hold: 'bullet:bullet1|internal_hit'
+ 32. Slow 1200mV 85C Model Hold: 'bullet:bullet2|internal_hit'
+ 33. Slow 1200mV 85C Model Hold: 'tank_speed:move_bullet|internal_tank_move'
+ 34. Slow 1200mV 85C Model Hold: 'rst'
+ 35. Slow 1200mV 85C Model Recovery: 'tank_speed:move_bullet|internal_tank_move'
+ 36. Slow 1200mV 85C Model Recovery: 'shoot_bullet1'
+ 37. Slow 1200mV 85C Model Recovery: 'shoot_bullet2'
+ 38. Slow 1200mV 85C Model Recovery: 'clk'
+ 39. Slow 1200mV 85C Model Recovery: 'ps2:keyboard|keyboard:u1|ready_set'
+ 40. Slow 1200mV 85C Model Recovery: 'bullet:bullet2|internal_hit'
+ 41. Slow 1200mV 85C Model Recovery: 'tank_speed:move_tank2|internal_tank_move'
+ 42. Slow 1200mV 85C Model Recovery: 'tank_speed:move_tank1|internal_tank_move'
+ 43. Slow 1200mV 85C Model Recovery: 'bullet:bullet1|internal_hit'
+ 44. Slow 1200mV 85C Model Removal: 'clk'
+ 45. Slow 1200mV 85C Model Removal: 'shoot_bullet2'
+ 46. Slow 1200mV 85C Model Removal: 'tank_speed:move_bullet|internal_tank_move'
+ 47. Slow 1200mV 85C Model Removal: 'shoot_bullet1'
+ 48. Slow 1200mV 85C Model Removal: 'bullet:bullet1|internal_hit'
+ 49. Slow 1200mV 85C Model Removal: 'bullet:bullet2|internal_hit'
+ 50. Slow 1200mV 85C Model Removal: 'tank_speed:move_tank2|internal_tank_move'
+ 51. Slow 1200mV 85C Model Removal: 'tank_speed:move_tank1|internal_tank_move'
+ 52. Slow 1200mV 85C Model Removal: 'ps2:keyboard|keyboard:u1|ready_set'
+ 53. Slow 1200mV 85C Model Metastability Summary
+ 54. Slow 1200mV 0C Model Fmax Summary
+ 55. Slow 1200mV 0C Model Setup Summary
+ 56. Slow 1200mV 0C Model Hold Summary
+ 57. Slow 1200mV 0C Model Recovery Summary
+ 58. Slow 1200mV 0C Model Removal Summary
+ 59. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 60. Slow 1200mV 0C Model Setup: 'clk'
+ 61. Slow 1200mV 0C Model Setup: 'tank_speed:move_bullet|internal_tank_move'
+ 62. Slow 1200mV 0C Model Setup: 'tank_speed:move_tank2|internal_tank_move'
+ 63. Slow 1200mV 0C Model Setup: 'tank_speed:move_tank1|internal_tank_move'
+ 64. Slow 1200mV 0C Model Setup: 'bullet:bullet1|internal_hit'
+ 65. Slow 1200mV 0C Model Setup: 'bullet:bullet2|internal_hit'
+ 66. Slow 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+ 67. Slow 1200mV 0C Model Setup: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+ 68. Slow 1200mV 0C Model Setup: 'rst'
+ 69. Slow 1200mV 0C Model Setup: 'de2lcd:lcd|CLK_400HZ'
+ 70. Slow 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|scan_ready'
+ 71. Slow 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+ 72. Slow 1200mV 0C Model Hold: 'clk'
+ 73. Slow 1200mV 0C Model Hold: 'de2lcd:lcd|CLK_400HZ'
+ 74. Slow 1200mV 0C Model Hold: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+ 75. Slow 1200mV 0C Model Hold: 'tank_speed:move_tank1|internal_tank_move'
+ 76. Slow 1200mV 0C Model Hold: 'tank_speed:move_tank2|internal_tank_move'
+ 77. Slow 1200mV 0C Model Hold: 'bullet:bullet1|internal_hit'
+ 78. Slow 1200mV 0C Model Hold: 'bullet:bullet2|internal_hit'
+ 79. Slow 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|scan_ready'
+ 80. Slow 1200mV 0C Model Hold: 'tank_speed:move_bullet|internal_tank_move'
+ 81. Slow 1200mV 0C Model Hold: 'rst'
+ 82. Slow 1200mV 0C Model Recovery: 'tank_speed:move_bullet|internal_tank_move'
+ 83. Slow 1200mV 0C Model Recovery: 'shoot_bullet1'
+ 84. Slow 1200mV 0C Model Recovery: 'shoot_bullet2'
+ 85. Slow 1200mV 0C Model Recovery: 'clk'
+ 86. Slow 1200mV 0C Model Recovery: 'ps2:keyboard|keyboard:u1|ready_set'
+ 87. Slow 1200mV 0C Model Recovery: 'tank_speed:move_tank2|internal_tank_move'
+ 88. Slow 1200mV 0C Model Recovery: 'tank_speed:move_tank1|internal_tank_move'
+ 89. Slow 1200mV 0C Model Recovery: 'bullet:bullet2|internal_hit'
+ 90. Slow 1200mV 0C Model Recovery: 'bullet:bullet1|internal_hit'
+ 91. Slow 1200mV 0C Model Removal: 'clk'
+ 92. Slow 1200mV 0C Model Removal: 'shoot_bullet2'
+ 93. Slow 1200mV 0C Model Removal: 'shoot_bullet1'
+ 94. Slow 1200mV 0C Model Removal: 'tank_speed:move_bullet|internal_tank_move'
+ 95. Slow 1200mV 0C Model Removal: 'bullet:bullet1|internal_hit'
+ 96. Slow 1200mV 0C Model Removal: 'bullet:bullet2|internal_hit'
+ 97. Slow 1200mV 0C Model Removal: 'tank_speed:move_tank2|internal_tank_move'
+ 98. Slow 1200mV 0C Model Removal: 'tank_speed:move_tank1|internal_tank_move'
+ 99. Slow 1200mV 0C Model Removal: 'ps2:keyboard|keyboard:u1|ready_set'
+100. Slow 1200mV 0C Model Metastability Summary
+101. Fast 1200mV 0C Model Setup Summary
+102. Fast 1200mV 0C Model Hold Summary
+103. Fast 1200mV 0C Model Recovery Summary
+104. Fast 1200mV 0C Model Removal Summary
+105. Fast 1200mV 0C Model Minimum Pulse Width Summary
+106. Fast 1200mV 0C Model Setup: 'clk'
+107. Fast 1200mV 0C Model Setup: 'tank_speed:move_bullet|internal_tank_move'
+108. Fast 1200mV 0C Model Setup: 'tank_speed:move_tank1|internal_tank_move'
+109. Fast 1200mV 0C Model Setup: 'tank_speed:move_tank2|internal_tank_move'
+110. Fast 1200mV 0C Model Setup: 'bullet:bullet1|internal_hit'
+111. Fast 1200mV 0C Model Setup: 'bullet:bullet2|internal_hit'
+112. Fast 1200mV 0C Model Setup: 'rst'
+113. Fast 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+114. Fast 1200mV 0C Model Setup: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+115. Fast 1200mV 0C Model Setup: 'de2lcd:lcd|CLK_400HZ'
+116. Fast 1200mV 0C Model Setup: 'ps2:keyboard|keyboard:u1|scan_ready'
+117. Fast 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|keyboard_clk_filtered'
+118. Fast 1200mV 0C Model Hold: 'clk'
+119. Fast 1200mV 0C Model Hold: 'ps2:keyboard|keyboard:u1|scan_ready'
+120. Fast 1200mV 0C Model Hold: 'de2lcd:lcd|CLK_400HZ'
+121. Fast 1200mV 0C Model Hold: 'VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int'
+122. Fast 1200mV 0C Model Hold: 'tank_speed:move_tank1|internal_tank_move'
+123. Fast 1200mV 0C Model Hold: 'tank_speed:move_tank2|internal_tank_move'
+124. Fast 1200mV 0C Model Hold: 'bullet:bullet1|internal_hit'
+125. Fast 1200mV 0C Model Hold: 'bullet:bullet2|internal_hit'
+126. Fast 1200mV 0C Model Hold: 'rst'
+127. Fast 1200mV 0C Model Hold: 'tank_speed:move_bullet|internal_tank_move'
+128. Fast 1200mV 0C Model Recovery: 'tank_speed:move_bullet|internal_tank_move'
+129. Fast 1200mV 0C Model Recovery: 'shoot_bullet1'
+130. Fast 1200mV 0C Model Recovery: 'shoot_bullet2'
+131. Fast 1200mV 0C Model Recovery: 'clk'
+132. Fast 1200mV 0C Model Recovery: 'bullet:bullet2|internal_hit'
+133. Fast 1200mV 0C Model Recovery: 'bullet:bullet1|internal_hit'
+134. Fast 1200mV 0C Model Recovery: 'tank_speed:move_tank2|internal_tank_move'
+135. Fast 1200mV 0C Model Recovery: 'tank_speed:move_tank1|internal_tank_move'
+136. Fast 1200mV 0C Model Recovery: 'ps2:keyboard|keyboard:u1|ready_set'
+137. Fast 1200mV 0C Model Removal: 'clk'
+138. Fast 1200mV 0C Model Removal: 'shoot_bullet2'
+139. Fast 1200mV 0C Model Removal: 'shoot_bullet1'
+140. Fast 1200mV 0C Model Removal: 'tank_speed:move_tank1|internal_tank_move'
+141. Fast 1200mV 0C Model Removal: 'tank_speed:move_tank2|internal_tank_move'
+142. Fast 1200mV 0C Model Removal: 'tank_speed:move_bullet|internal_tank_move'
+143. Fast 1200mV 0C Model Removal: 'bullet:bullet1|internal_hit'
+144. Fast 1200mV 0C Model Removal: 'bullet:bullet2|internal_hit'
+145. Fast 1200mV 0C Model Removal: 'ps2:keyboard|keyboard:u1|ready_set'
+146. Fast 1200mV 0C Model Metastability Summary
+147. Multicorner Timing Analysis Summary
+148. Board Trace Model Assignments
+149. Input Transition Times
+150. Signal Integrity Metrics (Slow 1200mv 0c Model)
+151. Signal Integrity Metrics (Slow 1200mv 85c Model)
+152. Signal Integrity Metrics (Fast 1200mv 0c Model)
+153. Setup Transfers
+154. Hold Transfers
+155. Recovery Transfers
+156. Removal Transfers
+157. Report TCCS
+158. Report RSKM
+159. Unconstrained Paths Summary
+160. Clock Status Summary
+161. Unconstrained Input Ports
+162. Unconstrained Output Ports
+163. Unconstrained Input Ports
+164. Unconstrained Output Ports
+165. Timing Analyzer Messages
 
 
 
@@ -221,9 +222,18 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   2.1%      ;
-;     Processor 3            ;   1.0%      ;
+;     Processor 3            ;   1.1%      ;
 ;     Processors 4-16        ;   0.9%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; sdc_910.sdc   ; OK     ; Mon Nov 27 11:57:53 2023 ;
++---------------+--------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -835,8 +845,8 @@ HTML report is unavailable in plain text report export.
 ; -3.341 ; tank:tank2|internal_tank_x[1]                ; bullet:bullet2|curr_bullet_x[1]~33           ; tank_speed:move_tank2|internal_tank_move ; bullet:bullet2|internal_hit ; 1.000        ; 2.996      ; 6.476      ;
 ; -3.218 ; tank:tank2|internal_tank_x[5]                ; bullet:bullet2|curr_bullet_x[5]~17           ; tank_speed:move_tank2|internal_tank_move ; bullet:bullet2|internal_hit ; 1.000        ; 2.828      ; 6.335      ;
 ; -0.033 ; score:tank2score|internal_curr_tank_score[0] ; score:tank2score|internal_curr_tank_score[1] ; bullet:bullet2|internal_hit              ; bullet:bullet2|internal_hit ; 1.000        ; -0.047     ; 0.984      ;
-; 0.190  ; score:tank2score|internal_curr_tank_score[1] ; score:tank2score|internal_curr_tank_score[1] ; bullet:bullet2|internal_hit              ; bullet:bullet2|internal_hit ; 1.000        ; -0.043     ; 0.765      ;
 ; 0.190  ; score:tank2score|internal_curr_tank_score[0] ; score:tank2score|internal_curr_tank_score[0] ; bullet:bullet2|internal_hit              ; bullet:bullet2|internal_hit ; 1.000        ; -0.043     ; 0.765      ;
+; 0.190  ; score:tank2score|internal_curr_tank_score[1] ; score:tank2score|internal_curr_tank_score[1] ; bullet:bullet2|internal_hit              ; bullet:bullet2|internal_hit ; 1.000        ; -0.043     ; 0.765      ;
 +--------+----------------------------------------------+----------------------------------------------+------------------------------------------+-----------------------------+--------------+------------+------------+
 
 
@@ -1022,8 +1032,8 @@ HTML report is unavailable in plain text report export.
 ; -2.412 ; VGA_top_level:vga|VGA_SYNC:videoSync|h_count[1] ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[0]   ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.079     ; 3.331      ;
 ; -2.412 ; VGA_top_level:vga|VGA_SYNC:videoSync|h_count[1] ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[1]   ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.079     ; 3.331      ;
 ; -2.409 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[6] ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[8]   ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.096     ; 3.311      ;
-; -2.407 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[1] ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[9]   ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.080     ; 3.325      ;
 ; -2.407 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[7] ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[8]   ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.096     ; 3.309      ;
+; -2.407 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[1] ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[9]   ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.080     ; 3.325      ;
 ; -2.406 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[5] ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_row[3] ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.093     ; 3.311      ;
 ; -2.406 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[5] ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_row[0] ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.093     ; 3.311      ;
 ; -2.406 ; VGA_top_level:vga|VGA_SYNC:videoSync|v_count[5] ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_row[1] ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int ; 1.000        ; -0.093     ; 3.311      ;
@@ -8428,7 +8438,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 27 00:12:58 2023
+    Info: Processing started: Mon Nov 27 11:57:51 2023
 Info: Command: quartus_sta top -c top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -8436,7 +8446,10 @@ Info (20030): Parallel compilation is enabled and will use 16 of the 16 processo
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): The Timing Analyzer is analyzing 22 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332104): Reading SDC File: 'sdc_910.sdc'
+Warning (332174): Ignored filter at sdc_910.sdc(1): clock could not be matched with a port File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/sdc_910.sdc Line: 1
+Warning (332049): Ignored create_clock at sdc_910.sdc(1): Argument <targets> is an empty collection File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/sdc_910.sdc Line: 1
+    Info (332050): create_clock -name SYSCLK -period 20 [get_ports clock] File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/sdc_910.sdc Line: 1
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int VGA_top_level:vga|VGA_SYNC:videoSync|pixel_clock_int
@@ -8678,10 +8691,10 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -1.000              -1.000 ps2:keyboard|keyboard:u1|ready_set 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5015 megabytes
-    Info: Processing ended: Mon Nov 27 00:13:04 2023
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 5009 megabytes
+    Info: Processing ended: Mon Nov 27 11:57:57 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

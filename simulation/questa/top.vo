@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-// DATE "11/27/2023 00:13:07"
+// DATE "11/27/2023 11:18:39"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -77,7 +77,7 @@ output 	lcd_on;
 output 	reset_led;
 output 	sec_led;
 output 	lcd_rw;
-output 	[7:0] data_bus;
+inout 	[7:0] data_bus;
 output 	[6:0] p1_score;
 output 	[6:0] p2_score;
 
