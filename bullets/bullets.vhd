@@ -9,7 +9,8 @@ entity bullet is
 
     port (
         -- Inputs
-        bullet_move : in std_logic;
+        clk : in std_logic;
+        pulse : in std_logic; -- If pulse 1, move bullet
         rst : in std_logic;
         shoot : in std_logic;
         curr_tank_x : in std_logic_vector (9 downto 0);
@@ -26,10 +27,7 @@ end entity bullet;
 
 architecture behavioral of bullet is
     
-    signal internal_shoot_status, internal_bullet_valid, internal_hit : std_logic;
     signal curr_bullet_x, curr_bullet_y : std_logic_vector (9 downto 0);
-    signal rst_hit : std_logic;
-
 
     function get_collision (signal other_tank_x, other_tank_y, bullet_x, bullet_y: std_logic_vector) return std_logic is
 		variable collision : std_logic;
@@ -46,120 +44,83 @@ architecture behavioral of bullet is
         return collision;
 	end function get_collision;
 
+    type state is (s_a, s_b, s_c, s_d);
+    signal curr_state, next_state : state;
+
 begin
 
-    process (rst, bullet_move) begin
+    process (clk, rst) begin
         if (rst = '1') then
-            rst_hit <= '0';
-        elsif (rising_edge(bullet_move)) then
-            if (internal_hit = '1') then
-                rst_hit <= '1';
-				elsif (rst_hit = '1') then
-					rst_hit <= '0';
-            end if;
-        --elsif (falling_edge(bullet_move)) then
-          --  if (rst_hit = '1') then
-            --    rst_hit <= '0';
-            --end if;
-        end if;
-
-    end process;
-
-    process (internal_bullet_valid, shoot) begin
-        -- If reset
-        if (internal_bullet_valid = '0') then
-            -- Set status to not shot
-            internal_shoot_status <= '0';
-        -- If bullet valid
-        elsif (rising_edge(shoot)) then
-            -- Set status to shot
-            internal_shoot_status <= '1';
+            curr_state <= s_a;
+        elsif (rising_edge(clk)) then
+            curr_state <= next_state;
         end if;
     end process;
-    
-    process (rst, rst_hit, internal_shoot_status, bullet_move) begin
-        if (rst_hit = '1' or rst = '1') then
-            internal_hit <= '0';
-            -- Set x value of bullet to tank
-            curr_bullet_x <= curr_tank_x;
-            -- Set y value of bullet to tank
-				if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
-					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
-				else
-					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
-				end if;
-            -- Bullet is now valid
-            internal_bullet_valid <= '0';
-        -- If bullet is called to move and bullet has been shot
-        elsif (internal_shoot_status = '0' and internal_hit = '0') then
-            internal_hit <= '0';
-            -- Set x value of bullet to tank
-            curr_bullet_x <= curr_tank_x;
-            -- Set y value of bullet to tank
-				if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
-					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
-				else
-					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
-				end if;
-            -- Bullet is now valid
-            internal_bullet_valid <= '1';
-        elsif (rising_edge(bullet_move)) then
-            -- If status is shot
-            if (internal_shoot_status = '1') then
-                -- If bullet has collided with other tank
-                if (get_collision(other_tank_x, other_tank_y, curr_bullet_x, curr_bullet_y) = '1') then 
-                    -- Set x value of bullet to tank
-                    curr_bullet_x <= curr_tank_x;
-                    -- Set y value of bullet to tank
-							if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
-								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
-							else
-								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
-							end if;
-                    -- Set hit to 1
-                    internal_hit <= '1';
-                    -- Bullet is no longer valid
-                    internal_bullet_valid <= '0';
-                -- If bullet is still in a valid location
-                elsif (unsigned(curr_bullet_x) <= to_unsigned(SCREEN_WIDTH, curr_bullet_x'length) and 
+
+    process (curr_state, shoot, pulse) begin
+
+        next_state <= curr_state;
+
+        case curr_state is
+            -- Idle state
+            when s_a =>
+                -- Initial bullet conditions
+                curr_bullet_x <= curr_tank_x;
+                curr_bullet_y <= curr_tank_y;
+                hit <= '0';
+                -- Check if bullet has been shot
+                if (shoot = '1') then
+                    next_state <= s_b;
+                else
+                    next_state <= s_a;  
+                end if;
+            -- Waiting for pulse state
+            when s_b =>
+                -- Bullet has not yet moved
+                curr_bullet_x <= curr_bullet_x;
+                curr_bullet_y <= curr_bullet_y;
+                hit <= '0';
+                -- Move to state based on current speed
+                if (pulse = '1') then
+                    next_state <= s_c;
+                end if;
+            -- Pulse recieved state
+            when s_c =>
+                -- Keep bullet at same location
+                curr_bullet_x <= curr_bullet_x;
+                -- If bullet direction is down
+                if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
+                    curr_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) + to_unsigned(1, curr_bullet_y'length));
+                -- If bullet direction is up
+                else
+                    curr_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) - to_unsigned(1, curr_bullet_y'length));
+                end if;
+                -- Hit is still 0
+                hit <= '0';
+                -- If collision, move to collision state
+                if (get_collision(other_tank_x, other_tank_y, curr_bullet_x, curr_bullet_y) = '1') then
+                    next_state <= s_d;
+                -- If not collision but valid, move back to waiting state
+                elsif ( unsigned(curr_bullet_x) <= to_unsigned(SCREEN_WIDTH, curr_bullet_x'length) and 
                         unsigned(curr_bullet_x) >= to_unsigned(0, curr_bullet_x'length) and
                         unsigned(curr_bullet_y) <= to_unsigned(SCREEN_HEIGHT, curr_bullet_y'length) and 
                         unsigned(curr_bullet_y) >= to_unsigned(0, curr_bullet_x'length)) then
-                    if (unsigned(curr_tank_y) < to_unsigned(SCREEN_HEIGHT/2, curr_tank_y'length)) then
-                        -- Move bullet by 1
-                        curr_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) + 1);
-                    else
-                        -- Move bullet by -1
-                        curr_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) - 1);
-                    end if;
-                    -- Keep x value of bullet the same
-                    curr_bullet_x <= curr_bullet_x;
-                    -- Set hit to 0
-                    internal_hit <= '0';
-                    -- Bullet is still valid
-                    internal_bullet_valid <= '1';
-                -- If bullet is not in a valid location
+                    next_state <= s_b;
+                -- If not valid, move back to initial state
                 else
-                    -- Set hit to 0
-                    internal_hit <= '0';
-                    -- Set x value of bullet to x value of tank
-                    curr_bullet_x <= curr_tank_x;
-                    -- Set y value of bullet to y value of tank
-							if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
-								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2, 10));
-							else
-								curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2, 10));
-							end if;
-                    -- Bullet is no longer valid
-                    internal_bullet_valid <= '0';
-                end if; 
-            end if;
-        end if;
+                    next_state <= s_a;
+                end if;
+            -- Hit state
+            when s_d =>
+                curr_bullet_x <= curr_tank_x;
+                curr_bullet_y <= curr_tank_y;
+                hit <= '1';
+                next_state <= s_a;
+        end case;
+
+        bullet_x <= curr_bullet_x;
+        bullet_y <= curr_bullet_y;
 
     end process;
-
-    bullet_x <= curr_bullet_x;
-    bullet_y <= curr_bullet_y;
-    hit <= internal_hit;
 
 end architecture behavioral;

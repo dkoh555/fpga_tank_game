@@ -8,26 +8,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks
+dC:/intelFPGA/20.1
 Ebullet
-Z0 w1700518134
-Z1 DPx4 work 10 tank_const 0 22 Gb`Od[Le]i4j?lU:6@@5V3
+Z0 w1701116979
+Z1 DPx4 work 10 tank_const 0 22 iW>:FkWXoQ;bzTjLN6kO`1
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 139
+!i122 86
 Z5 dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets
 Z6 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd
 Z7 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd
 l0
 L8 1
-VjM7aL[S4RjPBFeFX^;a4V3
-!s100 1N:bMhFfOTZkU3FaT0BDE1
+VG3S??^hE7e6BA_2P`I]3R1
+!s100 5zY[KOKl?<HMdilhSBN[]0
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1700518888
+Z9 !s110 1701118711
 !i10b 1
-Z10 !s108 1700518888.000000
+Z10 !s108 1701118711.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd|
 Z12 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets.vhd|
 !i113 1
@@ -38,12 +38,12 @@ R1
 R2
 R3
 R4
-DEx4 work 6 bullet 0 22 jM7aL[S4RjPBFeFX^;a4V3
-!i122 139
-l49
-L27 121
-VY5<JLamgcWQ^KeUQ38A8l3
-!s100 iF^?NY:haJBXl^9XfQG363
+DEx4 work 6 bullet 0 22 G3S??^hE7e6BA_2P`I]3R1
+!i122 86
+l50
+L28 99
+Ve^Jcl=30n0HInQVAMi5BU1
+!s100 h2=]FX@>]hJ5SVhQX9_BD1
 R8
 32
 R9
@@ -55,13 +55,13 @@ R12
 R13
 R14
 Ebullets_tb
-Z15 w1700518864
+Z15 w1701118704
 R1
 Z16 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
 R4
-!i122 140
+!i122 87
 R5
 Z17 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets_test.vhd
 Z18 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets_test.vhd
@@ -85,12 +85,12 @@ R16
 R2
 R3
 R4
-Z21 DEx4 work 10 bullets_tb 0 22 dV:XMaj8fGzXOP?EoHc:80
-!i122 140
-l55
-Z22 L12 173
-V?VKX=lN9Q9P5A^LKXG]5b2
-!s100 TJE^Wg?i:KMG67K^hn`QL2
+DEx4 work 10 bullets_tb 0 22 dV:XMaj8fGzXOP?EoHc:80
+!i122 87
+l65
+L12 192
+Vj2TRhXD854Gl^1E?MM2hm3
+!s100 UUZ;]YmQ`??Ph3Z2HljDk1
 R8
 32
 R9
@@ -101,25 +101,68 @@ R20
 !i113 1
 R13
 R14
+Emove_object
+Z21 w1701118651
+R2
+R3
+R4
+!i122 88
+R5
+Z22 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/move_object.vhd
+Z23 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/move_object.vhd
+l0
+L5 1
+V27UndOzNJP_SQ_2I2E0j]1
+!s100 F?CNIY4^zIWXDRd@4dc[I1
+R8
+32
+Z24 !s110 1701118712
+!i10b 1
+R10
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/move_object.vhd|
+Z26 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/move_object.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+Z27 DEx4 work 11 move_object 0 22 27UndOzNJP_SQ_2I2E0j]1
+!i122 88
+l20
+L15 24
+Vno7FFPl?HF7G7z`EZFl7C3
+!s100 S=l6D:`V<6<f:fU`?YKmV1
+R8
+32
+R24
+!i10b 1
+R10
+R25
+R26
+!i113 1
+R13
+R14
 Ptank_const
 R3
 R4
-!i122 138
-Z23 w1700494332
+!i122 85
+Z28 w1701055371
 R5
-Z24 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd
-Z25 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd
+Z29 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd
+Z30 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd
 l0
 L5 1
-VGb`Od[Le]i4j?lU:6@@5V3
-!s100 mCiejzHBEg4?D99M>SR543
+ViW>:FkWXoQ;bzTjLN6kO`1
+!s100 ^N3E?ko^FmcdnJ0a0O@d>2
 R8
 32
 R9
 !i10b 1
 R10
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd|
-Z27 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd|
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd|
+Z32 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/tank_const.vhd|
 !i113 1
 R13
 R14
@@ -127,65 +170,18 @@ Bbody
 R1
 R3
 R4
-!i122 138
+!i122 85
 l0
-L13 1
-V[_aYmjnQc:T0dnJbnzgBP2
-!s100 IIzo8h<[zeN>3IEEUhXN43
+L14 1
+V?FFG03[@E5QFVH67]31GW0
+!s100 N2TQ[Ci`0VQ]X>KV4V[4B0
 R8
 32
 R9
 !i10b 1
 R10
-R26
-R27
-!i113 1
-R13
-R14
-Etanks_tb
-Z28 w1700501389
-R1
-R16
-R2
-R3
-R4
-!i122 35
-R5
-R17
-R18
-l0
-L8 1
-VIIQi=6HSODj8e05aO4[LP1
-!s100 o<O6FTTaJ5cc8;NBRB]Vg1
-R8
-32
-Z29 !s110 1700501393
-!i10b 1
-Z30 !s108 1700501393.000000
-R19
-R20
-!i113 1
-R13
-R14
-Abehavioural
-R1
-R16
-R2
-R3
-R4
-DEx4 work 8 tanks_tb 0 22 IIQi=6HSODj8e05aO4[LP1
-!i122 35
-l54
-L12 170
-V<A65]O:I3JXZKi0XDGG]D3
-!s100 ^UVlfTnUgZmNh5JU<a^fZ3
-R8
-32
-R29
-!i10b 1
-R30
-R19
-R20
+R31
+R32
 !i113 1
 R13
 R14

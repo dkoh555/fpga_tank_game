@@ -11,28 +11,39 @@ end entity bullets_tb;
 
 architecture behavioural of bullets_tb is
 
+	-- Counter component
+	component move_object is
+		port (
+			clk : in std_logic;
+			rst : in std_logic;
+			pulse : out std_logic
+		);
+	end component move_object;
+
 	-- Bullet component
     component bullet is
 
         port (
             -- Inputs
-            bullet_move : in std_logic;
-            rst : in std_logic;
-            shoot : in std_logic;
-            curr_tank_x : in std_logic_vector (9 downto 0);
-            curr_tank_y : in std_logic_vector (9 downto 0);
-            other_tank_x : in std_logic_vector (9 downto 0);
-            other_tank_y : in std_logic_vector (9 downto 0);
-            -- Outputs
-            bullet_x : out std_logic_vector (9 downto 0);
-            bullet_y: out std_logic_vector (9 downto 0);
-            hit : out std_logic
-        );
+			clk : in std_logic;
+			pulse : in std_logic; -- If pulse 1, move bullet
+			rst : in std_logic;
+			shoot : in std_logic;
+			curr_tank_x : in std_logic_vector (9 downto 0);
+			curr_tank_y : in std_logic_vector (9 downto 0);
+			other_tank_x : in std_logic_vector (9 downto 0);
+			other_tank_y : in std_logic_vector (9 downto 0);
+			-- Outputs
+			bullet_x : out std_logic_vector (9 downto 0);
+			bullet_y: out std_logic_vector (9 downto 0);
+			hit : out std_logic
+			);
     
     end component bullet;
 
 	--Declaring signals
-    signal bullet_move_TB : std_logic := '0';
+    signal clk_TB : std_logic := '0';
+	signal pulse_TB : std_logic;
     signal rst_TB : std_logic := '0';
     signal shoot_TB : std_logic := '0';
     signal curr_tank_x_TB : std_logic_vector (9 downto 0);
@@ -42,7 +53,6 @@ architecture behavioural of bullets_tb is
     signal bullet_x_TB : std_logic_vector (9 downto 0);
     signal bullet_y_TB : std_logic_vector (9 downto 0);
     signal hit_TB : std_logic;
-    signal rst_hit_TB : std_logic;
 
 	--Signal to determine when testbench is done
 	signal TB_done : std_logic;
@@ -54,10 +64,19 @@ architecture behavioural of bullets_tb is
 
 begin
 
+
+	counter : move_object
+		port map (
+			clk => clk_TB,
+			rst => rst_TB,
+			pulse => pulse_TB
+		);
+
     dut: bullet
         port map (
             -- Inputs
-            bullet_move => bullet_move_TB,
+            clk => clk_TB,
+			pulse => pulse_TB,
             rst => rst_TB,
             shoot => shoot_TB,
             curr_tank_x => curr_tank_x_TB,
@@ -71,7 +90,7 @@ begin
         );
 					
 	process begin
-		bullet_move_TB <= not bullet_move_TB;
+		clk_TB <= not clk_TB;
 		wait for 1 ps;
 	end process;
 
@@ -144,9 +163,9 @@ begin
 			-- Move tank
 			for i in 0 to shoot_cycles loop
 				shoot_TB <= not shoot_TB;
-				wait for 0.1 ps;
+				wait for 2 ps;
 				shoot_TB <= not shoot_TB;
-				wait for 499.9 ps;
+				wait for 498 ps;
 			end loop;
 
 			--With the calculator result, prepare output for outfile
