@@ -202,3 +202,6 @@ run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+quit -sim
+# End time: 15:44:31 on Nov 27,2023, Elapsed time: 0:43:15
+# Errors: 0, Warnings: 1

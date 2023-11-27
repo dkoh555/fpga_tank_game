@@ -14,21 +14,19 @@ end entity move_object;
 
 architecture behavioral of move_object is
 
-    signal counter : std_logic_vector (20 downto 0); 
+    signal counter : std_logic_vector (3 downto 0); 
+    constant ZERO : std_logic_vector(counter'range) := (others => '0');
       
 begin
 
-    process (clk, rst) 
-
-        constant ZEROS : std_logic_vector(counter'range) := (others => '0');
-        
-    begin
+    process (clk, rst) begin
 
         if (rst = '1') then
-            counter <= (others => '0');
+            counter <= "0000";
+            pulse <= '0';
         elsif (rising_edge(clk)) then
             counter <= std_logic_vector(unsigned(counter) + to_unsigned(1,counter'length));
-            if (counter = ZEROS) then
+            if (counter = "0000") then
                 pulse <= '1';
             else
                 pulse <= '0';

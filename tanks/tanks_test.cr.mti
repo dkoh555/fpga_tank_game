@@ -1,15 +1,4 @@
-C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Loading package tank_const
--- Compiling entity tanks_tb
--- Compiling architecture behavioural of tanks_tb
-
-} {} {}} C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
+C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -27,5 +16,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package tank_const
 -- Compiling entity tank
 -- Compiling architecture behavioral of tank
+
+} {} {}} C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/move_object.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/move_object.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity move_object
+-- Compiling architecture behavioral of move_object
 
 } {} {}}

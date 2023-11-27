@@ -14,22 +14,34 @@ architecture behavioural of tanks_tb is
 	--Tank component
     component tank is
         port (
-            -- Inputs
-            clk : in std_logic;
-            rst : in std_logic;
-            tank_in_y : in std_logic_vector (9 downto 0);
-            tank_move : in std_logic;
+			-- Inputs
+			clk : in std_logic;
+			rst : in std_logic;
+			tank_in_y : in std_logic_vector (9 downto 0);
+			pulse : in std_logic;
+			speed : in std_logic_vector (1 downto 0);
 			-- Outputs
-            tank_out_y : out std_logic_vector (9 downto 0);
-            tank_out_x : out std_logic_vector (9 downto 0)
-        );
+			tank_out_y : out std_logic_vector (9 downto 0);
+			tank_out_x : out std_logic_vector (9 downto 0)
+    	);
     end component tank;
+
+	component move_object is
+
+		port (
+			clk : in std_logic;
+			rst : in std_logic;
+			pulse : out std_logic
+		);
+	
+	end component move_object;
 
 	--Declaring signals
     signal clk_TB : std_logic := '0';
     signal rst_TB : std_logic := '0';
     signal tank_in_y_TB : std_logic_vector (9 downto 0);
-    signal tank_move_TB : std_logic := '0';
+    signal pulse_TB : std_logic;
+	signal speed_TB : std_logic_vector (1 downto 0):= "01";
     signal tank_out_y_TB : std_logic_vector (9 downto 0);
     signal tank_out_x_TB : std_logic_vector (9 downto 0);
 
@@ -43,13 +55,21 @@ architecture behavioural of tanks_tb is
 
 begin
 
+	pulse_mod : move_object
+		port map (
+			clk => clk_TB,
+			rst => rst_TB,
+			pulse => pulse_TB
+		);
+
     dut: tank
         port map (
             -- Inputs
             clk => clk_TB,
             rst => rst_TB,
             tank_in_y => tank_in_y_TB,
-            tank_move => tank_move_TB,
+            pulse => pulse_TB,
+			speed => speed_TB,
 			-- Outputs
             tank_out_y => tank_out_y_TB,
             tank_out_x => tank_out_x_TB
@@ -99,10 +119,7 @@ begin
 			
 			-- Move tank
 			for i in 0 to term_two loop
-				tank_move_TB <= not tank_move_TB;
-				wait for 0.1 ps;
-				tank_move_TB <= not tank_move_TB;
-				wait for 4.9 ps;
+				wait for 100 ps;
 			end loop;
 
 			--With the calculator result, prepare output for outfile
