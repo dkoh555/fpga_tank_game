@@ -42,49 +42,6 @@ end entity top;
 architecture structural of top is
 
 	 -- PLL component
-	 component pll2 IS
-		PORT
-		(
-			areset : IN STD_LOGIC;
-			inclk0 : IN STD_LOGIC;
-			c0	: OUT STD_LOGIC ;
-			locked : OUT STD_LOGIC 
-		);
-		END component pll2;
-
-		-- Faster PLL component
-		component pll3 IS
-			PORT
-			(
-				areset : IN STD_LOGIC;
-				inclk0 : IN STD_LOGIC;
-				c0	: OUT STD_LOGIC;
-				locked : OUT STD_LOGIC 
-			);
-		END component pll3;
-		
-		
-		component pll4 IS
-			PORT
-			(
-				areset		: IN STD_LOGIC;
-				inclk0		: IN STD_LOGIC;
-				c0		: OUT STD_LOGIC ;
-				locked		: OUT STD_LOGIC 
-			);
-		END component pll4;
-		
-		
-		component pll5 IS
-			PORT
-			(
-				areset		: IN STD_LOGIC;
-				inclk0		: IN STD_LOGIC;
-				c0		: OUT STD_LOGIC ;
-				locked		: OUT STD_LOGIC 
-			);
-		END component pll5;
-		
 		component pll6 IS
 			PORT
 			(
