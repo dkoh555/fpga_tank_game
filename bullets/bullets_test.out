@@ -1,3 +1,8 @@
 Beginning to test...
-Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 320, Other Tank Y: 470, Hit: Yes , Final Bullet X: 320, Y: 73
-Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 100, Other Tank Y: 470, Hit: No , Final Bullet X: 320, Y: 463
+Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 320, Other Tank Y: 470, Hit: No , Final Bullet X: 320, Y: 120
+Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 320, Other Tank Y: 470, Hit: No , Final Bullet X: 320, Y: 450
+Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 320, Other Tank Y: 470, Hit: Yes , Final Bullet X: 320, Y: 30
+Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 100, Other Tank Y: 470, Hit: No , Final Bullet X: 320, Y: 451
+Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 100, Other Tank Y: 470, Hit: No , Final Bullet X: 320, Y: 30
+Curr Tank X: 320, Curr Tank Y: 10, Other Tank X: 310, Other Tank Y: 470, Hit: Yes , Final Bullet X: 320, Y: 30
+Finishing test...

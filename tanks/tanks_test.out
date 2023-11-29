@@ -1,1 +1,12 @@
 Beginning to test...
+Input Tank X: 320, Input Tank Y: 5, Cycles: 20, Final Tank X: 340, Final Tank Y: 5
+Input Tank X: 320, Input Tank Y: 320, Cycles: 308, Final Tank X: 628, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 309, Final Tank X: 629, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 310, Final Tank X: 628, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 311, Final Tank X: 627, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 924, Final Tank X: 14, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 925, Final Tank X: 13, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 926, Final Tank X: 12, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 927, Final Tank X: 11, Final Tank Y: 320
+Input Tank X: 320, Input Tank Y: 320, Cycles: 928, Final Tank X: 12, Final Tank Y: 320
+Finishing test...

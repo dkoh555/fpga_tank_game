@@ -14,7 +14,7 @@ Z0 w1701118651
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 36
+!i122 68
 Z4 dC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks
 Z5 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/move_object.vhd
 Z6 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/move_object.vhd
@@ -24,9 +24,9 @@ V27UndOzNJP_SQ_2I2E0j]1
 !s100 F?CNIY4^zIWXDRd@4dc[I1
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1701122748
+Z8 !s110 1701236476
 !i10b 1
-Z9 !s108 1701122748.000000
+Z9 !s108 1701236476.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/move_object.vhd|
 Z11 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/move_object.vhd|
 !i113 1
@@ -37,7 +37,7 @@ R1
 R2
 R3
 DEx4 work 11 move_object 0 22 27UndOzNJP_SQ_2I2E0j]1
-!i122 36
+!i122 68
 l20
 L15 24
 Vno7FFPl?HF7G7z`EZFl7C3
@@ -53,12 +53,12 @@ R11
 R12
 R13
 Etank
-Z14 w1701122589
+Z14 w1701144572
 Z15 DPx4 work 10 tank_const 0 22 Gb`Od[Le]i4j?lU:6@@5V3
 R1
 R2
 R3
-!i122 38
+!i122 70
 R4
 Z16 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd
 Z17 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd
@@ -68,11 +68,11 @@ VYL?4Pe>bfK4KE2Hjd3:LG0
 !s100 >2;:Q@iWS8lXB7S[=7:FK3
 R7
 32
-R8
+Z18 !s110 1701236477
 !i10b 1
-R9
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd|
-Z19 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd|
+Z19 !s108 1701236477.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd|
+Z21 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks.vhd|
 !i113 1
 R12
 R13
@@ -82,29 +82,29 @@ R1
 R2
 R3
 DEx4 work 4 tank 0 22 YL?4Pe>bfK4KE2Hjd3:LG0
-!i122 38
-l33
+!i122 70
+l32
 L22 83
-Ve2>`zDiVCgV:a?cZmA=fR0
-!s100 ]oblNRUA8_V2:X@=3HMjS3
+V8ioTgn1;Bj4Zl?a4eUCRT3
+!s100 Tlgii0Hg`mca=1eM>>63o3
 R7
 32
-R8
-!i10b 1
-R9
 R18
+!i10b 1
 R19
+R20
+R21
 !i113 1
 R12
 R13
 Ptank_const
 R2
 R3
-!i122 37
-Z20 w1700519625
+!i122 69
+Z22 w1700519625
 R4
-Z21 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
-Z22 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
+Z23 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
+Z24 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd
 l0
 L5 1
 VGb`Od[Le]i4j?lU:6@@5V3
@@ -114,8 +114,8 @@ R7
 R8
 !i10b 1
 R9
-Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd|
-Z24 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd|
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd|
+Z26 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tank_const.vhd|
 !i113 1
 R12
 R13
@@ -123,7 +123,7 @@ Bbody
 R15
 R2
 R3
-!i122 37
+!i122 69
 l0
 L13 1
 V[_aYmjnQc:T0dnJbnzgBP2
@@ -133,55 +133,55 @@ R7
 R8
 !i10b 1
 R9
-R23
-R24
+R25
+R26
 !i113 1
 R12
 R13
 Etanks_tb
-Z25 w1701122741
+Z27 w1701236437
 R15
-Z26 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z28 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R1
 R2
 R3
-!i122 39
+!i122 71
 R4
-Z27 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
-Z28 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
+Z29 8C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
+Z30 FC:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
 l0
 L8 1
 VIIQi=6HSODj8e05aO4[LP1
 !s100 o<O6FTTaJ5cc8;NBRB]Vg1
 R7
 32
-R8
+R18
 !i10b 1
-R9
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd|
-Z30 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd|
+R19
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd|
+Z32 !s107 C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd|
 !i113 1
 R12
 R13
 Abehavioural
 R15
-R26
+R28
 R1
 R2
 R3
-Z31 DEx4 work 8 tanks_tb 0 22 IIQi=6HSODj8e05aO4[LP1
-!i122 39
+Z33 DEx4 work 8 tanks_tb 0 22 IIQi=6HSODj8e05aO4[LP1
+!i122 71
 l56
-Z32 L12 143
-VEjXAC1H0klzRO`BEKcCo`1
-!s100 fPXNBB19CCIYlg<VQn9Jb0
+Z34 L12 143
+VB3Yl34n2_?fi;K[=<8?G<1
+!s100 idf^NWDeRflDc8ng8:zHO0
 R7
 32
-R8
+R18
 !i10b 1
-R9
-R29
-R30
+R19
+R31
+R32
 !i113 1
 R12
 R13

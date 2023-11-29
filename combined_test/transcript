@@ -1,0 +1,1230 @@
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 09:59:35 on Nov 29,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# ** Warning: (vsim-7) Failed to open VHDL file "tanks_test.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /tanks_tb File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
+# Loading work.move_object(behavioral)
+# ** Warning: (vsim-3473) Component instance "dut : tank" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tanks_tb File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/tanks/tanks_test.vhd
+quit -sim
+# End time: 09:59:48 on Nov 29,2023, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 4
+vsim -gui work.overall_tb
+# vsim -gui work.overall_tb 
+# Start time: 09:59:55 on Nov 29,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# ** Warning: (vsim-3473) Component instance "dut_tank1 : tank" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/combined_test/overall_test.vhd
+# ** Warning: (vsim-3473) Component instance "dut_tank2 : tank" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/combined_test/overall_test.vhd
+# Loading work.score(behavioral)
+add wave -r /*
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 2 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 2 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 3 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 3 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 4 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 4 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 5 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 5 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 6 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 6 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 7 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 7 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 8 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 8 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 10 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 10 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 42 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 42 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 50 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 52 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 72 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 76 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 106 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 106 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 109 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 109 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 110 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 110 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 111 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 111 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 112 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 112 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 113 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 113 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 114 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 114 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 116 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 116 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 116 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 116 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 117 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 117 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 118 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 118 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 119 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 119 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 120 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 120 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 121 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 121 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 122 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 122 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 124 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 124 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 154 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 154 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 156 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 156 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 164 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 166 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 186 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 190 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 218 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 218 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 218 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 220 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 220 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 250 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 254 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 282 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 282 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 282 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 284 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 284 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 314 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 318 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 348 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 348 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 351 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 351 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 352 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 352 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 353 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 353 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 354 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 354 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 355 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 355 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 356 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 356 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 358 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 358 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 358 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 358 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 359 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 359 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 360 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 360 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 361 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 361 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 362 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 362 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 363 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 363 ps  Iteration: 1  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 364 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 364 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 366 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 366 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 396 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 396 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 398 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 398 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 406 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 408 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 428 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 432 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 460 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 460 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 460 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 462 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 462 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 492 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 496 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 524 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 524 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 524 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 526 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 526 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 556 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 560 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 588 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 588 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 588 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 590 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 590 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 620 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 624 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 652 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 652 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 652 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 654 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 654 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 684 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 688 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 716 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 716 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 716 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 718 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 718 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 748 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 752 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 780 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 780 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 780 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 782 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 782 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 812 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 816 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 844 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 844 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 844 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 846 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 846 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 876 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 880 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 908 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 908 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 908 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 910 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 910 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 940 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 944 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 972 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 972 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 972 ps  Iteration: 3  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 974 ps  Iteration: 1  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 974 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 106 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 220 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 284 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 348 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 462 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 526 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 590 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 654 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 718 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 782 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 846 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 910 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 974 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+add wave sim:/overall_tb/*
+add wave sim:/overall_tb/*
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 106 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 220 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 284 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 348 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 462 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 526 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 590 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 654 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 718 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 782 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 846 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 910 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 974 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+# Load canceled
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd failed with 1 errors.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 74 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 104 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 106 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 164 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 188 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 220 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 252 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 284 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 316 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 346 ps  Iteration: 2  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 348 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 406 ps  Iteration: 0  Instance: /overall_tb
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 430 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 462 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 494 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 526 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 558 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 590 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 622 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 654 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 686 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 718 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 750 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 782 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 814 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 846 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 878 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 910 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 942 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 974 ps  Iteration: 2  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd failed with 1 errors.
+# 7 compiles, 1 failed with 1 error.
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# Compile of tank_const.vhd was successful.
+# Compile of score_const.vhd was successful.
+# Compile of bullets.vhd was successful.
+# Compile of move_object.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of overall_test.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of gamestate.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tank_const(body)
+# Loading work.score_const(body)
+# Loading work.overall_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.bullet(behavioral)
+# Loading work.tank(behavioral)
+# Loading work.score(behavioral)
+# Loading work.gamestate(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet2
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /overall_tb/dut_bullet1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /overall_tb/dut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /overall_tb/dut

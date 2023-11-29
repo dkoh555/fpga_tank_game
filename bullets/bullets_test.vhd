@@ -165,7 +165,7 @@ begin
 				shoot_TB <= not shoot_TB;
 				wait for 2 ps;
 				shoot_TB <= not shoot_TB;
-				wait for 498 ps;
+				wait until rising_edge(pulse_TB);
 			end loop;
 
 			--With the calculator result, prepare output for outfile

@@ -36,6 +36,10 @@ begin
         -- Initialize signals to avoid latches
         if (rst = '1') then
             curr_state <= reset;
+            -- Update Tank Position
+            curr_tank_x <= std_logic_vector(to_unsigned(SCREEN_WIDTH / 2, curr_tank_x'length));
+            -- Update Direction
+            curr_direction <= '0';
         elsif (rising_edge(clk)) then
             -- Update State
             curr_state <= next_state;

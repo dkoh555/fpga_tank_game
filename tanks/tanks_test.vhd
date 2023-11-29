@@ -79,13 +79,13 @@ begin
 		clk_TB <= not clk_TB;
 		wait for 1 ps;	
 	end process;
-
 				
 	process is
 	-- Variables for reading and writing strings
 	variable my_line : line;
 	variable term_one : integer;
 	variable term_two : integer;
+	variable count : integer := 0;
 	
 	--Begin testbench
 	begin
@@ -118,8 +118,8 @@ begin
 			std.textio.write(my_line, to_integer(unsigned(tank_out_x_TB)));
 			
 			-- Move tank
-			for i in 0 to term_two loop
-				wait for 100 ps;
+			for i in 0 to (term_two - 1) loop
+				wait until rising_edge(pulse_TB);
 			end loop;
 
 			--With the calculator result, prepare output for outfile

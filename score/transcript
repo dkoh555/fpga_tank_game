@@ -1,43 +1,6 @@
-# Compile of score_const.vhd was successful.
-# Compile of score.vhd was successful.
-# Compile of score_test.vhd was successful.
-# 3 compiles, 0 failed with no errors.
 vsim -gui work.score_tb
 # vsim -gui work.score_tb 
-# Start time: 14:54:50 on Nov 28,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.score_const(body)
-# Loading work.score_tb(behavioural)
-# Loading work.score(behavioral)
-# ** Fatal: (vsim-3817) Port "clk" of entity "score" is not in the component being instantiated.
-#    Time: 0 ps  Iteration: 0  Instance: /score_tb/dut File: C:/Users/nickm/OneDrive/CE355/fpga_tank_game/score/score.vhd Line: 11
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 14:54:50 on Nov 28,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 2
-# Compile of score_const.vhd was successful.
-# Compile of score.vhd was successful.
-# Compile of score_test.vhd failed with 16 errors.
-# 3 compiles, 1 failed with 16 errors.
-# Compile of score_const.vhd was successful.
-# Compile of score.vhd was successful.
-# Compile of score_test.vhd failed with 4 errors.
-# 3 compiles, 1 failed with 4 errors.
-# Compile of score_const.vhd was successful.
-# Compile of score.vhd was successful.
-# Compile of score_test.vhd failed with 3 errors.
-# 3 compiles, 1 failed with 3 errors.
-# Compile of score_const.vhd was successful.
-# Compile of score.vhd was successful.
-# Compile of score_test.vhd was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -gui work.score_tb
-# vsim -gui work.score_tb 
-# Start time: 14:57:18 on Nov 28,2023
+# Start time: 00:23:35 on Nov 29,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -49,15 +12,15 @@ vsim -gui work.score_tb
 add wave -r /*
 run
 quit -sim
-# End time: 15:08:31 on Nov 28,2023, Elapsed time: 0:11:13
-# Errors: 0, Warnings: 5
+# End time: 00:24:05 on Nov 29,2023, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1
 # Compile of score_const.vhd was successful.
 # Compile of score.vhd was successful.
 # Compile of score_test.vhd was successful.
 # 3 compiles, 0 failed with no errors.
 vsim -gui work.score_tb
 # vsim -gui work.score_tb 
-# Start time: 15:08:40 on Nov 28,2023
+# Start time: 00:24:12 on Nov 29,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -68,5 +31,20 @@ vsim -gui work.score_tb
 # Loading work.score(behavioral)
 add wave -r /*
 run
-# End time: 15:31:57 on Nov 28,2023, Elapsed time: 0:23:17
-# Errors: 0, Warnings: 2
+# Compile of score_const.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_test.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.score_const(body)
+# Loading work.score_tb(behavioural)
+# Loading work.score(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+quit -sim
+# End time: 00:30:09 on Nov 29,2023, Elapsed time: 0:05:57
+# Errors: 0, Warnings: 1
+project open C:/Users/nickm/OneDrive/CE355/fpga_tank_game/gamestate/gamestate_tb

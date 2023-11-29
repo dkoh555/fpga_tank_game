@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Nov 28 17:34:40 2023
+Wed Nov 29 10:29:44 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 28 17:34:40 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 29 10:29:44 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; top                                            ;
 ; Top-level Entity Name              ; top                                            ;
@@ -237,8 +237,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Total combinational functions               ; 818       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 187       ;
-;     -- 3 input functions                    ; 227       ;
+;     -- 4 input functions                    ; 186       ;
+;     -- 3 input functions                    ; 228       ;
 ;     -- <=2 input functions                  ; 404       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
@@ -258,9 +258,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 140       ;
-; Total fan-out                               ; 3217      ;
-; Average fan-out                             ; 2.52      ;
+; Maximum fan-out                             ; 159       ;
+; Total fan-out                               ; 3240      ;
+; Average fan-out                             ; 2.54      ;
 +---------------------------------------------+-----------+
 
 
@@ -506,9 +506,9 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 270   ;
 ; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 85    ;
+; Number of registers using Asynchronous Clear ; 107   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 110   ;
+; Number of registers using Clock Enable       ; 108   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -518,6 +518,10 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; tank:tank1|curr_tank_x[8]               ; 10      ;
+; tank:tank1|curr_tank_x[6]               ; 10      ;
+; tank:tank2|curr_tank_x[8]               ; 10      ;
+; tank:tank2|curr_tank_x[6]               ; 10      ;
 ; ps2:keyboard|speed1inner[0]             ; 5       ;
 ; ps2:keyboard|speed2inner[0]             ; 5       ;
 ; bullet:bullet2|curr_bullet_y[8]         ; 5       ;
@@ -529,7 +533,7 @@ Encoding Type:  One-Hot
 ; bullet:bullet1|curr_bullet_y[4]         ; 6       ;
 ; bullet:bullet1|curr_bullet_y[5]         ; 6       ;
 ; bullet:bullet1|curr_bullet_y[1]         ; 6       ;
-; Total number of inverted registers = 11 ;         ;
+; Total number of inverted registers = 15 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -541,10 +545,12 @@ Encoding Type:  One-Hot
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|VGA_top_level:vga|VGA_SYNC:videoSync|v_count[3] ;
 ; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|de2lcd:lcd|CLK_COUNT_400HZ[7]                   ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|ps2:keyboard|keyboard:u1|INCNT[3]               ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|tank:tank2|curr_tank_x[4]                       ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|tank:tank1|curr_tank_x[1]                       ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |top|bullet:bullet2|curr_bullet_y[2]                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|tank:tank2|curr_tank_x[9]                       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|tank:tank1|curr_tank_x[7]                       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |top|bullet:bullet2|curr_bullet_y[5]                 ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|bullet:bullet1|curr_bullet_y[3]                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|tank:tank2|curr_tank_x[6]                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|tank:tank1|curr_tank_x[6]                       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp1|segments_out[2]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp1|segments_out[4]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ps2:keyboard|leddcd:speeddisp2|segments_out[3]  ;
@@ -1115,10 +1121,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 78                          ;
 ; cycloneiii_ff         ; 270                         ;
-;     CLR               ; 51                          ;
-;     ENA               ; 56                          ;
+;     CLR               ; 53                          ;
+;     ENA               ; 54                          ;
 ;     ENA CLR           ; 34                          ;
-;     ENA SLD           ; 20                          ;
+;     ENA CLR SLD       ; 20                          ;
 ;     SCLR              ; 22                          ;
 ;     plain             ; 87                          ;
 ; cycloneiii_io_obuf    ; 8                           ;
@@ -1131,13 +1137,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         0 data inputs ; 18                          ;
 ;         1 data inputs ; 25                          ;
 ;         2 data inputs ; 104                         ;
-;         3 data inputs ; 58                          ;
-;         4 data inputs ; 187                         ;
+;         3 data inputs ; 59                          ;
+;         4 data inputs ; 186                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.14                        ;
+; Average LUT depth     ; 4.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1146,7 +1152,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1156,7 +1162,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Nov 28 17:34:32 2023
+    Info: Processing started: Wed Nov 29 10:29:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1401,9 +1407,9 @@ Info (21057): Implemented 982 device resources after synthesis - the final resou
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4916 megabytes
-    Info: Processing ended: Tue Nov 28 17:34:40 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4912 megabytes
+    Info: Processing ended: Wed Nov 29 10:29:44 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:16
 
 

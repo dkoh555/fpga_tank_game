@@ -31,7 +31,6 @@ architecture behavioural of score_tb is
 
 	--Signal to determine when testbench is done
 	signal TB_done : std_logic;
-    signal store_hit_TB : std_logic;
 
 	--File Variables
 	file infile : text open read_mode is "score_test.in";
@@ -87,7 +86,7 @@ begin
 			std.textio.write(my_line, num_hits);
 			
 			-- Move tank
-			for i in 0 to num_hits loop
+			for i in 0 to (num_hits - 1) loop
 				other_tank_hit_TB <= '1';
                 wait for 1 ps;
                 other_tank_hit_TB <= '0';

@@ -1,1 +1,193 @@
-project open C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets_test
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 23:20:02 on Nov 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+quit -sim
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# End time: 23:26:29 on Nov 28,2023, Elapsed time: 0:06:27
+# Errors: 0, Warnings: 2
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 23:26:37 on Nov 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+restart
+run
+quit -sim
+# End time: 23:33:13 on Nov 28,2023, Elapsed time: 0:06:36
+# Errors: 0, Warnings: 1
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 23:33:39 on Nov 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+quit -sim
+# End time: 23:34:27 on Nov 28,2023, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 23:34:53 on Nov 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+quit -sim
+# End time: 23:39:50 on Nov 28,2023, Elapsed time: 0:04:57
+# Errors: 0, Warnings: 1
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 23:39:58 on Nov 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+quit -sim
+# End time: 23:41:14 on Nov 28,2023, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 2
+# Compile of move_object.vhd was successful.
+# Compile of tank_const.vhd was successful.
+# Compile of tanks.vhd was successful.
+# Compile of tanks_test.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tanks_tb
+# vsim -gui work.tanks_tb 
+# Start time: 23:41:23 on Nov 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.tank_const(body)
+# Loading work.tanks_tb(behavioural)
+# Loading work.move_object(behavioral)
+# Loading work.tank(behavioral)
+add wave -r /*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+quit -sim
+# End time: 23:57:54 on Nov 28,2023, Elapsed time: 0:16:31
+# Errors: 0, Warnings: 1
+project open C:/Users/nickm/OneDrive/CE355/fpga_tank_game/bullets/bullets_tb
