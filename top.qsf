@@ -149,7 +149,6 @@ set_global_assignment -name VHDL_FILE mini_project_vga/VGA_top_level.vhd
 set_global_assignment -name VHDL_FILE mini_project_vga/vga_sync.vhd
 set_global_assignment -name VHDL_FILE mini_project_vga/pixelGenerator.vhd
 set_global_assignment -name VHDL_FILE mini_project_vga/colorROM.vhd
-set_global_assignment -name VHDL_FILE score/score_stop.vhd
 set_global_assignment -name VHDL_FILE tanks/tanks.vhd
 set_global_assignment -name VHDL_FILE score/score.vhd
 set_global_assignment -name VHDL_FILE ps2/ps2.vhd
@@ -164,4 +163,9 @@ set_global_assignment -name VHDL_FILE bullets/tank_const.vhd
 set_global_assignment -name VHDL_FILE bullets/bullets.vhd
 set_global_assignment -name VHDL_FILE top.vhd
 set_global_assignment -name SDC_FILE sdc_910.sdc
+set_global_assignment -name QIP_FILE pll2.qip
+set_global_assignment -name QIP_FILE pll3.qip
+set_global_assignment -name QIP_FILE pll4.qip
+set_global_assignment -name QIP_FILE pll5.qip
+set_global_assignment -name QIP_FILE pll6.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

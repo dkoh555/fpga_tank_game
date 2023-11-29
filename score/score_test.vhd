@@ -15,6 +15,7 @@ architecture behavioural of score_tb is
     component score is
 
         port (
+		clk : in std_logic;
         rst : in std_logic;
         other_tank_hit : in std_logic;
         curr_tank_score : out std_logic_vector (SCORE_WIDTH - 1 downto 0)
@@ -23,6 +24,7 @@ architecture behavioural of score_tb is
     end component score;
 
 	--Declaring signals
+	signal clk_TB : std_logic := '0';
     signal rst_TB : std_logic;
     signal other_tank_hit_TB : std_logic;
     signal curr_tank_score_TB : std_logic_vector (SCORE_WIDTH - 1 downto 0);
@@ -40,12 +42,18 @@ begin
     dut: score
         port map (
             -- Inputs
+			clk => clk_TB,
             rst => rst_TB,
             other_tank_hit => other_tank_hit_TB,
             -- Outputs
             curr_tank_score => curr_tank_score_TB
         );
-									
+				
+	process is begin
+		clk_TB <= not clk_TB;
+		wait for 1 ps;
+	end process;	
+	
 	process is
 	-- Variables for reading and writing strings
 	variable my_line : line;
@@ -53,6 +61,8 @@ begin
 	
 	--Begin testbench
 	begin
+
+		
 	
 		TB_done <= '0';
 	
@@ -79,9 +89,9 @@ begin
 			-- Move tank
 			for i in 0 to num_hits loop
 				other_tank_hit_TB <= '1';
-                wait for 0.1 ps;
+                wait for 1 ps;
                 other_tank_hit_TB <= '0';
-                wait for 4.9 ps;
+                wait for 1 ps;
 			end loop;
 
 			--With the calculator result, prepare output for outfile

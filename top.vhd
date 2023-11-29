@@ -20,6 +20,8 @@ entity top is
 		-- VGA Inputs
 		rst_n : in std_logic;
 		
+		hit : out std_logic;
+		
 		inter_speed1disp, inter_speed2disp : out std_logic_vector (6 downto 0);
 		
 		-- VGA Outputs
@@ -39,6 +41,60 @@ end entity top;
 
 architecture structural of top is
 
+	 -- PLL component
+	 component pll2 IS
+		PORT
+		(
+			areset : IN STD_LOGIC;
+			inclk0 : IN STD_LOGIC;
+			c0	: OUT STD_LOGIC ;
+			locked : OUT STD_LOGIC 
+		);
+		END component pll2;
+
+		-- Faster PLL component
+		component pll3 IS
+			PORT
+			(
+				areset : IN STD_LOGIC;
+				inclk0 : IN STD_LOGIC;
+				c0	: OUT STD_LOGIC;
+				locked : OUT STD_LOGIC 
+			);
+		END component pll3;
+		
+		
+		component pll4 IS
+			PORT
+			(
+				areset		: IN STD_LOGIC;
+				inclk0		: IN STD_LOGIC;
+				c0		: OUT STD_LOGIC ;
+				locked		: OUT STD_LOGIC 
+			);
+		END component pll4;
+		
+		
+		component pll5 IS
+			PORT
+			(
+				areset		: IN STD_LOGIC;
+				inclk0		: IN STD_LOGIC;
+				c0		: OUT STD_LOGIC ;
+				locked		: OUT STD_LOGIC 
+			);
+		END component pll5;
+		
+		component pll6 IS
+			PORT
+			(
+				areset		: IN STD_LOGIC;
+				inclk0		: IN STD_LOGIC;
+				c0		: OUT STD_LOGIC ;
+				locked		: OUT STD_LOGIC 
+			);
+		END component pll6;
+		
     -- Tank component
     component tank is
         port (
@@ -76,6 +132,7 @@ architecture structural of top is
     -- Score component
     component score is 
         port (
+				clk : in std_logic;
             rst : in std_logic;
             other_tank_hit : in std_logic;
             curr_tank_score : out std_logic_vector (1 downto 0)
@@ -127,7 +184,7 @@ architecture structural of top is
 	 -- PS2 Keyboard component
 	 component ps2 is
 		port(
-			keyboard_clk, keyboard_data, clock_50MHz, reset : in std_logic;
+			keyboard_clk, keyboard_data, clock_50MHz, clk, reset : in std_logic;
 			key : out std_logic_vector(13 downto 0);
 			speed1disp: out std_logic_vector(6 downto 0);
 			speed2disp: out std_logic_vector(6 downto 0);
@@ -151,6 +208,7 @@ architecture structural of top is
 			WINNER : in std_logic_vector(1 downto 0);
 			-- Clock and Reset signals
 			CLOCK_50 : in std_logic;
+			other_clk : in std_logic;
 			RESET_N : in std_logic;
 			-- Inputs for tank and bullet positions
 			TANK_A_POSX, TANK_A_POSY : in std_logic_vector(9 downto 0); 
@@ -162,25 +220,11 @@ architecture structural of top is
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
 		);
 	end component VGA_top_level;
-	
-	-- Score Stop component
-	component score_stop is 
-		port (
-			clk : in std_logic;
-			rst : in std_logic;
-			tank1_score : in std_logic_vector (1 downto 0);
-			tank2_score : in std_logic_vector (1 downto 0);
-			real_clk : out std_logic
-		);
-	end component score_stop;
-	
 	 
 	-- Unused signals
 	--signal inter_speed1disp, inter_speed2disp : std_logic_vector (6 downto 0);
 	signal inter_key : std_logic_vector (13 downto 0);
 	
-	-- Clock signal
-	signal t_clk : std_logic;
 	
 	-- Reset signal
 	signal t_rst : std_logic;
@@ -213,15 +257,25 @@ architecture structural of top is
 	signal n_clk, clk_lock : std_logic;
 
 begin
-	
+
+	hit <= t_hit1 and t_hit2;
 	
 	t_rst <= not rst;
+	
+	pll : pll6
+		port map (
+			areset => '0',
+			inclk0 => clk,
+			c0 => n_clk,
+			locked => clk_lock
+		);
 
 	keyboard : ps2 
 		port map ( 
 			keyboard_clk => kb_clk,
 			keyboard_data => kb_data,
 			clock_50MHz => clk,
+			clk => n_clk,
 			reset => rst,
 			key => inter_key, -- Not actually used
 			speed1disp => inter_speed1disp,
@@ -232,23 +286,23 @@ begin
 		
 	move_tank1 : move_object
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			rst => t_rst,
 			pulse => t_tank1move
 		);
 		
 	move_tank2 : move_object
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			rst => t_rst,
 			pulse => t_tank2move
 		);
 
 	tank1 : tank 
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			rst => t_rst,
-			tank_in_y => std_logic_vector(to_unsigned(450, 10)),
+			tank_in_y => std_logic_vector(to_unsigned(30, 10)),
 			pulse => t_tank1move,
 			speed => t_speed1,
 			tank_out_y => t_tank1y,
@@ -257,7 +311,7 @@ begin
 
 	tank2 : tank 
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			rst => t_rst,
 			tank_in_y => std_logic_vector(to_unsigned(450, 10)),
 			pulse => t_tank2move,
@@ -268,17 +322,17 @@ begin
 		
 	move_bullet : move_object
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			rst => t_rst,
 			pulse => t_bulletmove
 		);
 	
 	bullet1 : bullet
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			pulse => t_bulletmove,
 			rst => t_rst,
-			shoot => shoot_bullet1,
+			shoot => not shoot_bullet1,
 			curr_tank_x => t_tank1x,
 			curr_tank_y => t_tank1y,
 			other_tank_x => t_tank2x,
@@ -290,10 +344,10 @@ begin
 	
 	bullet2 : bullet
 		port map (
-			clk => t_clk,
+			clk => n_clk,
 			pulse => t_bulletmove,
 			rst => t_rst,
-			shoot => shoot_bullet2,
+			shoot => not shoot_bullet2,
 			curr_tank_x => t_tank2x,
 			curr_tank_y => t_tank2y,
 			other_tank_x => t_tank1x,
@@ -305,6 +359,7 @@ begin
 
 	tank1score : score
 		port map (
+			clk => n_clk,
 			rst => t_rst,
 			other_tank_hit => t_hit1,
 			curr_tank_score => t_score1
@@ -312,6 +367,7 @@ begin
 	
 	tank2score : score
 		port map (
+			clk => n_clk,
 			rst => t_rst,
 			other_tank_hit => t_hit2,
 			curr_tank_score => t_score2
@@ -320,25 +376,18 @@ begin
 	state : gamestate
 		port map (
 			rst => t_rst,
-			clk => clk,
+			clk => n_clk,
 			score1 => t_score1,
 			score2 => t_score2,
 			winner => t_winner		
 		);
 		
-	stop : score_stop
-		port map (
-			clk => clk,
-			rst => t_rst,
-			tank1_score => t_score1,
-			tank2_score => t_score2,
-			real_clk => t_clk		
-		);
 		
 	vga : VGA_top_level
 		port map (
 			WINNER => t_winner,
 			CLOCK_50 => clk,
+			other_clk => n_clk,
 			RESET_N => rst_n,
 			TANK_A_POSX => t_tank1x,
 			TANK_A_POSY => t_tank1y,

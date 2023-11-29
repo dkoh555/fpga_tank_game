@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "hit",
+					"strict" : false
+				},
+				{
 					"name" : "inter_speed1disp[0]",
 					"strict" : false
 				},
@@ -264,7 +268,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "kb_data",
+					"name" : "shoot_bullet2",
 					"strict" : false
 				},
 				{
@@ -272,7 +276,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "shoot_bullet2",
+					"name" : "kb_data",
 					"strict" : false
 				},
 				{

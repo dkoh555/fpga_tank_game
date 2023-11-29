@@ -27,7 +27,7 @@ end entity bullet;
 
 architecture behavioral of bullet is
     
-    signal curr_bullet_x, curr_bullet_y : std_logic_vector (9 downto 0);
+    signal curr_bullet_x, curr_bullet_y, next_bullet_x, next_bullet_y : std_logic_vector (9 downto 0);
 
     function get_collision (signal other_tank_x, other_tank_y, bullet_x, bullet_y: std_logic_vector) return std_logic is
 		variable collision : std_logic;
@@ -52,21 +52,33 @@ begin
     process (clk, rst) begin
         if (rst = '1') then
             curr_state <= s_a;
+            curr_bullet_x <= curr_tank_x;
+				if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, curr_tank_y'length)) then
+					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2,  curr_tank_y'length));
+				else
+					curr_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2,  curr_tank_y'length));
+				end if;
         elsif (rising_edge(clk)) then
+            -- Update State
             curr_state <= next_state;
+            -- Update Bullet Positions
+            curr_bullet_x <= next_bullet_x;
+            curr_bullet_y <= next_bullet_y;
         end if;
     end process;
 
-    process (curr_state, shoot, pulse) begin
-
-        next_state <= curr_state;
+    process (curr_state, shoot, pulse, curr_tank_x, curr_tank_y, curr_bullet_x, curr_bullet_y, other_tank_x, other_tank_y) begin
 
         case curr_state is
             -- Idle state
             when s_a =>
                 -- Initial bullet conditions
-                curr_bullet_x <= curr_tank_x;
-                curr_bullet_y <= curr_tank_y;
+                next_bullet_x <= curr_tank_x;
+                if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, curr_tank_y'length)) then
+						  next_bullet_y <= std_logic_vector(unsigned(curr_tank_y) + to_unsigned(TANK_HEIGHT/2,  curr_tank_y'length));
+					 else
+						  next_bullet_y <= std_logic_vector(unsigned(curr_tank_y) - to_unsigned(TANK_HEIGHT/2,  curr_tank_y'length));
+					 end if;
                 hit <= '0';
                 -- Check if bullet has been shot
                 if (shoot = '1') then
@@ -77,30 +89,35 @@ begin
             -- Waiting for pulse state
             when s_b =>
                 -- Bullet has not yet moved
-                curr_bullet_x <= curr_bullet_x;
-                curr_bullet_y <= curr_bullet_y;
+                next_bullet_x <= curr_bullet_x;
+                next_bullet_y <= curr_bullet_y;
                 hit <= '0';
                 -- Move to state based on current speed
                 if (pulse = '1') then
                     next_state <= s_c;
+                else
+                    next_state <= s_b;
                 end if;
             -- Pulse recieved state
             when s_c =>
                 -- Keep bullet at same location
-                curr_bullet_x <= curr_bullet_x;
+                next_bullet_x <= curr_bullet_x;
                 -- If bullet direction is down
                 if (unsigned(curr_tank_y) < to_unsigned(SCREEN_WIDTH/2, 10)) then
-                    curr_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) + to_unsigned(1, curr_bullet_y'length));
+                    next_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) + to_unsigned(1, curr_bullet_y'length));
                 -- If bullet direction is up
                 else
-                    curr_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) - to_unsigned(1, curr_bullet_y'length));
+                    next_bullet_y <= std_logic_vector(unsigned(curr_bullet_y) - to_unsigned(1, curr_bullet_y'length));
                 end if;
                 -- Hit is still 0
-                hit <= '0';
-                -- If collision, move to collision state
-                if (get_collision(other_tank_x, other_tank_y, curr_bullet_x, curr_bullet_y) = '1') then
+				    hit <= '0';
+                if (
+                    unsigned(curr_bullet_x) >= unsigned(other_tank_x) - to_unsigned(TANK_WIDTH/2, other_tank_x'length) and 
+                    unsigned(curr_bullet_x) <= unsigned(other_tank_x) + to_unsigned(TANK_WIDTH/2, other_tank_x'length) and
+                    unsigned(curr_bullet_y) >= unsigned(other_tank_y) - to_unsigned(TANK_HEIGHT/2, other_tank_y'length) and
+                    unsigned(curr_bullet_y) <= unsigned(other_tank_y) + to_unsigned(TANK_HEIGHT/2, other_tank_y'length)) then
                     next_state <= s_d;
-                -- If not collision but valid, move back to waiting state
+                -- -- If not collision but valid, move back to waiting state
                 elsif ( unsigned(curr_bullet_x) <= to_unsigned(SCREEN_WIDTH, curr_bullet_x'length) and 
                         unsigned(curr_bullet_x) >= to_unsigned(0, curr_bullet_x'length) and
                         unsigned(curr_bullet_y) <= to_unsigned(SCREEN_HEIGHT, curr_bullet_y'length) and 
@@ -112,8 +129,8 @@ begin
                 end if;
             -- Hit state
             when s_d =>
-                curr_bullet_x <= curr_tank_x;
-                curr_bullet_y <= curr_tank_y;
+                next_bullet_x <= curr_tank_x;
+                next_bullet_y <= curr_tank_y;
                 hit <= '1';
                 next_state <= s_a;
         end case;

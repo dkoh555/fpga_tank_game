@@ -7,7 +7,7 @@ use WORK.tank_const.all;
 entity pixelGenerator is
 	port(	
 			winner : in std_logic_vector(1 downto 0);
-			clk, ROM_clk, rst_n, video_on, eof : in std_logic;
+			clk, other_clk, ROM_clk, rst_n, video_on, eof : in std_logic;
 			pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
 			top_tank_x, top_tank_y : in std_logic_vector(9 downto 0); 
 			bot_tank_x, bot_tank_y	: in std_logic_vector(9 downto 0);
@@ -73,11 +73,11 @@ begin
 
 --------------------------------------------------------------------------------------------	
 
-	pixelDraw : process(clk, rst_n) is
+	pixelDraw : process(other_clk, rst_n) is
 	
 	begin
 			
-		if (rising_edge(clk)) then
+		if (rising_edge(other_clk)) then
 		
 			if (winner = "00") then
 				if (pixel_column_int > (top_tank_col_int - TANK_WIDTH/2) and pixel_column_int < (top_tank_col_int + TANK_WIDTH/2)

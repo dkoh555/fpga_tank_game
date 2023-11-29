@@ -22,12 +22,11 @@ end entity tank;
 architecture behavioral of tank is
 
     -- Define signal to keep track of tank x position
-    signal internal_tank_x: std_logic_vector (9 downto 0);
+    signal next_tank_x, curr_tank_x: std_logic_vector (9 downto 0);
     -- Define signals to keep track of tank movement direction (0: Right, 1: Left)
-    signal new_direction, direction : std_logic;
+    signal next_direction, curr_direction : std_logic;
     -- Define signal to keep track of state for the FSM
     type state is (idle, reset, update, move_left, move_right);
-    signal resized : std_logic_vector (9 downto 0);
     signal curr_state, next_state : state;
 
 begin
@@ -38,27 +37,29 @@ begin
         if (rst = '1') then
             curr_state <= reset;
         elsif (rising_edge(clk)) then
+            -- Update State
             curr_state <= next_state;
+            -- Update Tank Position
+            curr_tank_x <= next_tank_x;
+            -- Update Direction
+            curr_direction <= next_direction;
         end if;
     end process;
 
     -- Combinational process of FSM; contains the different states and their instructions
-    process(curr_state, pulse, direction, speed) begin
-        internal_tank_x <= internal_tank_x;
-        new_direction <= new_direction; 
+    process(curr_state, pulse, speed, curr_direction, curr_tank_x) begin
         -- Case statement to decide what happens to the tank
         case curr_state is
             -- When reset, shift the positions of the tank back to the center of the screen
             -- then set state back to idle
             when reset =>
-                internal_tank_x <= std_logic_vector(to_unsigned(SCREEN_WIDTH / 2, internal_tank_x'length));
-                new_direction <= '0';
+                next_tank_x <= std_logic_vector(to_unsigned(SCREEN_WIDTH / 2, curr_tank_x'length));
+                next_direction <= '0';
                 next_state <= idle;
-
             -- When idle, simply wait for the pulse
             when idle =>
-                -- internal_tank_x <= internal_tank_x;
-                -- new_direction <= new_direction; 
+                next_tank_x <= curr_tank_x;
+                next_direction <= curr_direction; 
                 -- When pulse is received, make the next state update
                 if (pulse = '1') then
                     next_state <= update;
@@ -68,12 +69,12 @@ begin
 
             -- When update, check the current conditions of the tank and adjust its state accordingly
             when update =>
-                -- internal_tank_x <= internal_tank_x;
-                -- new_direction <= new_direction;
+                next_tank_x <= curr_tank_x;
+                next_direction <= curr_direction;
                 -- If tank moves to right and does exceed screen
                 -- OR if tank moves to left and does not exceed screen, change state to move_left
-                if ((to_integer(unsigned(internal_tank_x)) + TANK_WIDTH / 2 + 1 >= SCREEN_WIDTH and new_direction = '0')
-                    or (to_integer(unsigned(internal_tank_x)) - TANK_WIDTH / 2 - 1 > 0 and new_direction = '1')) then
+                if ((to_integer(unsigned(curr_tank_x)) + TANK_WIDTH / 2 + 1 >= SCREEN_WIDTH and curr_direction = '0')
+                    or (to_integer(unsigned(curr_tank_x)) - TANK_WIDTH / 2 - 1 > 0 and curr_direction = '1')) then
                     next_state <= move_left;
                 -- If tank moves to right and does not exceed screen
                 -- OR if tank moves to left and does exceed screen (all other conditions), change state to move_right
@@ -83,14 +84,14 @@ begin
 
             -- When move_left, move the tank left and set state to idle
             when move_left =>
-                internal_tank_x <= std_logic_vector(unsigned(internal_tank_x) - resize(unsigned(speed), 10));
-                new_direction <= '1';
+                next_tank_x <= std_logic_vector(unsigned(curr_tank_x) - resize(unsigned(speed), 10));
+                next_direction <= '1';
                 next_state <= idle;
 
             -- when move_right, move the tank right and set state to idle
             when move_right =>
-                internal_tank_x <= std_logic_vector(unsigned(internal_tank_x) + resize(unsigned(speed), 10));
-                new_direction <= '0';
+                next_tank_x <= std_logic_vector(unsigned(curr_tank_x) + resize(unsigned(speed), 10));
+                next_direction <= '0';
                 next_state <= idle;
 
         end case;
@@ -98,8 +99,6 @@ begin
     end process;
 
     tank_out_y <= tank_in_y;
-    tank_out_x <= internal_tank_x;
-    direction <= new_direction;
-    resized <= std_logic_vector(resize(unsigned(speed), 10));
+    tank_out_x <= curr_tank_x;
 
 end architecture behavioral;

@@ -8,6 +8,7 @@ use WORK.score_const.all;
 entity score is 
 
     port (
+		  clk : in std_logic;
         rst : in std_logic;
         other_tank_hit : in std_logic;
         curr_tank_score : out std_logic_vector (1 downto 0)
@@ -21,16 +22,18 @@ architecture behavioral of score is
 
 begin
 
-    process (other_tank_hit, rst) begin
+    process (clk, rst) begin
         -- If reset = '1'
         if (rst = '1') then
             -- Reset score to 0
             internal_curr_tank_score <= (others => '0');
         -- If hit becomes 1
-        elsif (rising_edge(other_tank_hit)) then
-            -- Increase score by 1
-            internal_curr_tank_score <= std_logic_vector(unsigned(internal_curr_tank_score) + to_unsigned(1, SCORE_WIDTH));
-        end if;
+        elsif (rising_edge(clk)) then
+				if (other_tank_hit = '1') then
+					-- Increase score by 1
+					internal_curr_tank_score <= std_logic_vector(unsigned(internal_curr_tank_score) + to_unsigned(1, SCORE_WIDTH));
+				end if;
+		  end if;
 
     end process;
 

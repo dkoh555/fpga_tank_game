@@ -4,7 +4,7 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity ps2 is
-	port( 	keyboard_clk, keyboard_data, clock_50MHz ,
+	port( 	keyboard_clk, keyboard_data, clock_50MHz , clk,
 			reset : in std_logic;--, read : in std_logic;
 			key : out std_logic_vector(13 downto 0);
 			speed1disp: out std_logic_vector(6 downto 0);
@@ -90,11 +90,11 @@ begin
 	end if;
 end process a1;
 
-speedp1 : process(clock_50MHz, reset)
+speedp1 : process(clk, reset)
 begin
 	if (reset = '0') then
 		speed1inner <= "0001";
-	elsif rising_edge(clock_50MHz) then
+	elsif rising_edge(clk) then
 		if (history0 = x"69") then
 			speed1inner <= "0001";
 		elsif (history0 = x"72") then
@@ -109,11 +109,11 @@ end process speedp1;
 
 speed1 <= speed1inner(1 downto 0);
 
-speedp2 : process(clock_50MHz, reset)
+speedp2 : process(clk, reset)
 begin
 	if (reset = '0') then
 		speed2inner <= "0001";
-	elsif rising_edge(clock_50MHz) then
+	elsif rising_edge(clk) then
 		if (history0 = x"16") then
 			speed2inner <= "0001";
 		elsif (history0 = x"1E") then
