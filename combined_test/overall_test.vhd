@@ -95,7 +95,8 @@ architecture behavioural of overall_tb is
     --Declaring tank signals
     signal tank1_x_TB : std_logic_vector (9 downto 0);
     signal tank1_y_TB : std_logic_vector (9 downto 0);
-    signal tank2_x_TB : std_logic_vector (9 downto 0);
+    signal tank2_x1_TB : std_logic_vector (9 downto 0);
+    signal tank2_x_TB : std_logic_vector (9 downto 0) := std_logic_vector(to_unsigned(320, 10));
     signal tank2_y_TB : std_logic_vector (9 downto 0);
 
     --Declaring score signals
@@ -181,7 +182,7 @@ begin
 			speed => "01",
 			-- Outputs
             tank_out_y => tank2_y_TB,
-            tank_out_x => tank2_x_TB
+            tank_out_x => tank2_x1_TB
         );
 
     dut_score1: score

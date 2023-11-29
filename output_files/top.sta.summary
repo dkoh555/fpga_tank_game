@@ -3,71 +3,71 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.423
+Slack : 0.468
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'SYSCLK'
-Slack : 14.976
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.387
+Slack : 15.925
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'SYSCLK'
-Slack : 0.405
+Slack : 0.102
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.144
+Slack : 3.156
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SYSCLK'
-Slack : 9.708
+Slack : 9.704
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.976
+Slack : 1.017
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'SYSCLK'
-Slack : 15.398
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.339
+Slack : 16.260
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'SYSCLK'
-Slack : 0.356
+Slack : 0.047
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.136
+Slack : 3.141
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SYSCLK'
-Slack : 9.718
+Slack : 9.715
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.699
+Slack : 3.689
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'SYSCLK'
-Slack : 17.461
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.175
+Slack : 17.929
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'SYSCLK'
-Slack : 0.183
+Slack : -0.044
+TNS   : -0.044
+
+Type  : Fast 1200mV 0C Model Hold 'pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.228
+Slack : 3.227
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SYSCLK'
